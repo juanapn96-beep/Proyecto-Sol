@@ -1,0 +1,345 @@
+% ============================================================
+%  capitulo2_diagnostico.tex
+%  Capítulo 2: Diagnóstico y Caracterización de Barrios
+%              Subnormales
+% ============================================================
+
+\chapter{Diagnóstico y Caracterización de Barrios Subnormales}
+\label{chap:diagnostico}
+
+Entender qué está pasando en los BS antes de proponer cualquier solución no es un formalismo académico: es la condición mínima para que una intervención funcione. Este capítulo caracteriza los BS en Colombia con énfasis en la región Caribe, cruzando fuentes estadísticas oficiales, planes quinquenales de los OR y los resultados de una consulta directa a 20 profesionales del sector. El análisis cubre las condiciones legales, socioeconómicas, técnicas y culturales de estos territorios, e identifica las problemáticas que afectan tanto a las comunidades como a los prestadores del servicio. Los parámetros que resulten de esta caracterización alimentan directamente el caso de estudio del Capítulo~\ref{chap:tecnico} y la metodología del Capítulo~\ref{chap:metodologia}.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Legalidad en los Barrios Subnormales}
+\label{sec:legalidad}
+% ─────────────────────────────────────────────────────────────
+
+El artículo 2.2.3.1.2 del DUR 1073 de 2015 define un BS como:
+
+\begin{quote}
+\textit{``[\ldots] \textbf{asentamiento humano ubicado en las cabeceras de municipios} o distritos que reúne los siguientes requisitos: \textbf{(i) que no tenga servicio público domiciliario de energía eléctrica o que este se obtenga a través de derivaciones} del Sistema de Distribución Local o de una Acometida, efectuadas \textbf{sin aprobación del respectivo Operador de Red}; (ii) que \textbf{no se trate de zonas donde se deba suspender el servicio} público domiciliario de electricidad, [\ldots], y (iii) \textbf{Certificación del Alcalde Municipal o Distrital} o de la autoridad competente \textbf{en la cual conste la clasificación y existencia de los Barrios Subnormales} [\ldots]''}
+\parencite{DUR1073_2015} (énfasis añadido).
+\end{quote}
+
+Hay dos implicaciones prácticas que conviene subrayar desde el principio. La primera: que un barrio sea subnormal no significa que el OR tenga prohibido prestar el servicio; solo significa que no lo ha formalizado aún. La segunda, y más crítica para el PRONE: sin la certificación del alcalde o la autoridad competente, ningún OR puede presentar un proyecto de normalización al MME, por muy evidente que sea la subnormalidad del barrio. Un asentamiento puede llevar treinta años en esas condiciones y seguir siendo inelegible para el programa si el ente territorial no ha expedido ese papel. Esta barrera institucional ha frustrado la participación de OR que tienen capacidad técnica pero no logran que las alcaldías actúen, como documentan \textcite{CabralesSanjuan2015} para el caso de CENS. El Capítulo~\ref{chap:normativo} analiza esta dinámica con mayor detalle.
+
+Para cuantificar el problema, se tomó el reporte consolidado de la SSPD a través del Formato 11, reglamentado por la Resolución SSPD-20102400008055, para el periodo 2000--2020. Es el último con consolidado anual completo disponible. Como referencia de la situación actual, se empleó la Encuesta de Calidad de Vida (ECV) del DANE 2024 \parencite{SSPD2020, DANE2024a}.
+
+Los datos del Formato 11 requirieron depuración previa para eliminar registros inconsistentes. Se excluyeron los barrios cuya fecha de establecimiento coincide con o es posterior a la fecha de certificación, los registros con macromedidor igual a cero asociados a la Empresa Municipal de Cartago, y se conservó únicamente la certificación más reciente por barrio.
+
+Del procesamiento resultaron \textbf{1.644 barrios subnormales} certificados entre 2000 y 2020, habitados por \textbf{314.333 familias} conectadas de manera irregular. De ese total, 307.671 familias en 1.625 barrios tienen certificación activa a 2020; los barrios restantes tienen certificaciones de 2017 a 2019, y es razonable inferir que varios ya fueron normalizados, lo que explica la ausencia de actualización.
+
+La distribución geográfica no es uniforme. Los barrios certificados están en 300 municipios de 17 departamentos, pero el 90\% de las familias afectadas se concentra en siete departamentos del Caribe: Atlántico, Bolívar, Cesar, Córdoba, La Guajira, Magdalena y Sucre \parencite{SSPD2020}. Air-e y Afinia acumulan casi la totalidad de esa subnormalidad. La Tabla~\ref{tab:bs_colombia} muestra la distribución completa.
+
+\begin{table}[H]
+\centering
+\caption{Cantidad de barrios subnormales en Colombia y familias asociadas, de acuerdo con la ubicación y OR que presta el servicio}
+\label{tab:bs_colombia}
+\begin{tabularx}{\textwidth}{>{\RaggedRight}p{5.5cm} >{\RaggedRight}p{3.5cm} >{\centering}p{2cm} >{\centering\arraybackslash}p{2cm}}
+\toprule
+\textbf{OR} & \textbf{Cobertura departamental} & \textbf{Cantidad de BS} & \textbf{Número de familias} \\
+\midrule
+\rowcolor{grisclaro}
+Air-e S.A.S. E.S.P. & Atlántico, Bolívar, La Guajira, Magdalena & 727 & 162.604 \\
+Caribemar de la Costa S.A.S. E.S.P. (Afinia) & Atlántico, Bolívar, Cesar, Córdoba, La Guajira, Magdalena, Sucre & 767 & 137.999 \\
+\rowcolor{grisclaro}
+Electrificadora del Huila S.A. E.S.P. & Caquetá, Cauca, Huila, Tolima & 22 & 2.406 \\
+Electrificadora del Meta S.A. E.S.P. & Cundinamarca, Meta & 31 & 11.168 \\
+\rowcolor{grisclaro}
+Empresa de Energía de Arauca & Arauca & 45 & 45\textsuperscript{a} \\
+Empresa de Energía de Casanare S.A. E.S.P. & Boyacá, Casanare, Cauca & 1 & 6 \\
+\rowcolor{grisclaro}
+Empresa de Energía del Putumayo S.A. E.S.P. & Putumayo & 51 & 660 \\
+\midrule
+\textbf{Total} & & \textbf{1.644} & \textbf{314.333} \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize \textsuperscript{a} Dato extraído directamente del reporte SSPD; sin consolidado regional disponible.}\\
+\multicolumn{4}{l}{\footnotesize \textit{Fuente: Elaboración propia con datos del Formato 11 -- Herramienta O3 \parencite{SSPD2020}.}}
+\end{tabularx}
+\end{table}
+
+Según el plan quinquenal de Air-e para 2023, ese OR atendía 165.554 usuarios subnormales, el 16,8\% de sus clientes en estratos 1, 2 y 3. Comparado con el SUI de 2020, eso representa un crecimiento del 1,81\% \parencite{Aire2023, SSPD2020}. Afinia reportó en 2021 un incremento del 10,4\%, con 152.360 usuarios \parencite{Afinia2021}.
+
+El dato que más preocupa no es el stock sino el ritmo. La ECV 2024 del DANE muestra que las viviendas sin título pasaron de 558.000 en 2020 a 703.000 en 2024, un crecimiento del 26\% en cuatro años \parencite{DANE2024a}. La informalidad habitacional crece mucho más rápido que la capacidad de intervención del Estado y de los OR. El resultado es una demanda acumulada de normalización que presiona los recursos del PRONE sin que existan mecanismos suficientes para absorberla.
+
+Dado que Bolívar, Córdoba y La Guajira aparecen entre los seis departamentos con más viviendas sin título entre 2022 y 2024, el análisis que sigue se concentra en la región Caribe, donde se encuentra la mayor parte del problema \parencite{DANE2024a}.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Estado Socioeconómico de los Usuarios en los Barrios Subnormales}
+\label{sec:socioeconomico}
+% ─────────────────────────────────────────────────────────────
+
+Un proyecto de normalización que no considera cuánto puede pagar una familia, qué relación tiene con el Estado y qué entiende por ``energía gratuita'' está condenado a fracasar técnicamente bien. Esta sección caracteriza el contexto socioeconómico de los BS a partir de estadísticas oficiales y de los hallazgos de la consulta a expertos.
+
+\subsection{Condiciones de pobreza y vulnerabilidad en la región Caribe}
+\label{subsec:pobreza_caribe}
+
+Los siete departamentos del Caribe donde se concentra la subnormalidad eléctrica tienen las brechas sociales más pronunciadas del país en las regiones conectadas al SIN. El Índice de Pobreza Multidimensional (IPM) nacional bajó de 32,9 a 18,5 entre 2018 y 2024, pero la región Caribe sigue encabezando el ranking, como muestra la Figura~\ref{fig:ipm} \parencite{DANE2024b}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figura_ipm.png}
+\caption{Índice de Pobreza Multidimensional calculado por el DANE}
+\label{fig:ipm}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{DANE2024b}.}
+\end{figure}
+
+Al desagregar las variables de pobreza por departamento (Figura~\ref{fig:variables_pobreza}), las que más pesan son el bajo logro educativo, la inadecuada eliminación de excretas, el rezago escolar y el trabajo informal \parencite{DANE2024b}. Los hogares tienen en promedio 3,5 integrantes y el 57,2\% reporta que sus ingresos no alcanzan para cubrir los gastos mínimos. Ese es el contexto real al que llega un proyecto de normalización.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{figura_variables_pobreza.png}
+\caption{Variables que contribuyen a la pobreza en la región Caribe en 2024}
+\label{fig:variables_pobreza}
+\footnotesize\textit{Fuente: Extraído de \parencite{DANE2024b}.}
+\end{figure}
+
+Para una familia donde más de la mitad de los ingresos no cubre los gastos básicos, la llegada de una factura de energía que antes no existía o era mínima no es un ajuste menor. Es un choque económico real, y cualquier diseño de intervención que no lo reconozca va a encontrar resistencia.
+
+\subsection{Características habitacionales de los BS}
+\label{subsec:habitacionales}
+
+Los BS se construyen sobre la urgencia, no sobre la planificación. Las viviendas se levantan con materiales no certificados, sin seguir ningún parámetro técnico de habitabilidad, y la disposición del barrio no contempla vías de acceso adecuadas para vehículos (Figura~\ref{fig:barrio_viviendas}) \parencite{SerranoRueda2019, VillagranRomero2022}. Esto tiene consecuencias logísticas directas para los proyectos de normalización: llegar a ciertos sectores con equipos y materiales de obra es costoso y en algunos casos técnicamente restrictivo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\textwidth]{figura_barrio_viviendas_1.png}\hfill
+\includegraphics[width=0.48\textwidth]{figura_barrio_viviendas_2.png}
+\caption{Barrio subnormal -- Construcción de viviendas}
+\label{fig:barrio_viviendas}
+\footnotesize\textit{Fuente: Extraído de \parencite{VillagranRomero2022}.}
+\end{figure}
+
+\subsection{Estratificación socioeconómica y acceso a subsidios}
+\label{subsec:estratificacion}
+
+En 2017, el DNP reclasificó la población colombiana en grupos según ingresos y condiciones sociodemográficas. Los grupos A y B son los de menor capacidad económica. Los BS del Caribe se ubican mayoritariamente en estratos 1 y 2, lo que los hace elegibles para el subsidio del Fondo de Energía Social (FOES), que cubre parte del costo de la energía en áreas especiales. Según la Ley 1117 de 2006, la estratificación es un requisito obligatorio para acceder a ese beneficio \parencite{Ley1117_2006}. Para los efectos de este estudio, se asume que todos los usuarios de los BS de la región Caribe pertenecen al estrato 1.
+
+\subsection{Composición étnica y su incidencia en la normalización}
+\label{subsec:etnica}
+
+La región Caribe tiene una presencia significativa de comunidades con diferenciación étnica, y eso importa para los proyectos de normalización. Sus formas de organización, gobernanza y relación con el Estado son distintas a las del resto de la población urbana, y una intervención que no las considera genera fricciones innecesarias. Según el Censo 2018 del DANE, las proporciones con autorreconocimiento étnico en los departamentos seleccionados son \parencite{DANE2018}:
+
+\begin{itemize}
+    \item \textbf{Atlántico:} 1,7\% indígena; 2,7\% negro o afrodescendiente.
+    \item \textbf{Bolívar:} 0,3\% indígena; 0,2\% palenquero; 6,9\% negro, mulato o afrodescendiente.
+    \item \textbf{Magdalena:} 1,7\% indígena; 2,6\% negro, mulato o afrodescendiente.
+    \item \textbf{Cesar:} 4,7\% indígena; 3,7\% negro o afrodescendiente.
+    \item \textbf{Córdoba:} 13,1\% indígena; 2,3\% afrodescendiente.
+    \item \textbf{Sucre:} 12,2\% indígena; 2,8\% afrodescendiente.
+    \item \textbf{La Guajira:} 48,4\% indígena; 1,6\% afrodescendiente.
+\end{itemize}
+
+La metodología del Capítulo~\ref{chap:metodologia} incorpora esta variable como consideración transversal en la fase de diagnóstico.
+
+\subsection{Niveles de recaudo y cultura de pago}
+\label{subsec:recaudo}
+
+Entre el 58\% y el 68\% de los sectores subnormales de Air-e y Afinia registran recaudos de apenas el 1\% al 25\% de la tarifa aplicada. Ese dato no se explica solo por falta de voluntad de pago: es el resultado de limitaciones económicas reales, años de acceso informal al servicio y una desconfianza acumulada hacia el OR y hacia el sistema tarifario.
+
+La consulta a expertos confirma esto con contundencia. El 89,47\% de los profesionales consultados identifica la oposición comunitaria como el principal obstáculo para la normalización. Esa resistencia viene de tres factores que se alimentan mutuamente: el temor a que la factura individual sea más cara de lo que pueden pagar, la desconfianza hacia el OR y la ``cultura del no pago'' que se arraiga cuando el acceso informal lleva décadas siendo la norma \parencite{SerranoRueda2019}.
+
+Y el temor a la factura tiene base real. Pasar de no pagar o de pagar una cuota comunitaria de entre \$40.000 y \$50.000 mensuales a una factura individual de \$100.000 a \$200.000 es un salto que no se puede ignorar en el diseño de ningún proyecto. Los expertos consultados lo calificaron de forma casi unánime como un impacto crítico que, si no se maneja bien, puede llevar a los usuarios a volver a las conexiones ilegales. Los detalles de estos resultados se presentan en la Sección~\ref{sec:consulta_expertos} y en el Anexo~\ref{anx:encuesta}.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Estado de las Redes Eléctricas y Caracterización del Consumo de Energía en Barrios Subnormales}
+\label{sec:redes_consumo}
+% ─────────────────────────────────────────────────────────────
+
+\subsection{Condiciones técnicas de la infraestructura existente}
+\label{subsec:infraestructura}
+
+Las redes eléctricas en los BS de la región Caribe no cumplen el RETIE. No es un incumplimiento puntual: es una situación sistemática que se reproduce en prácticamente todos los asentamientos. Como muestra la Figura~\ref{fig:barrio_red}, la infraestructura se construye de manera artesanal, sin profesionales calificados y sin ningún criterio de planeación técnica. Los problemas más recurrentes son:
+
+\begin{itemize}
+    \item Conductores de calibres heterogéneos mezclados en el mismo circuito, sin coordinación de capacidades de corriente.
+    \item Sin sistemas de protección coordinados — ni fusibles, ni reconectadores, ni seccionadores.
+    \item Acometidas realizadas mediante derivaciones directas sin medición ni protección individual.
+    \item Alumbrado público artesanal con luminarias hechizas llamadas coloquialmente ``jeringas''.
+    \item Conductores sostenidos con amarres informales en postes de madera, sin respetar las distancias de seguridad del RETIE.
+    \item Separación entre postes irregular, sin cálculo de carga del vano ni resistencia mecánica del apoyo.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.30\textwidth]{figura_red_bs_1.png}\hfill
+\includegraphics[width=0.30\textwidth]{figura_red_bs_2.png}\hfill
+\includegraphics[width=0.36\textwidth]{figura_red_bs_3.png}
+\caption{Barrio subnormal -- Construcción de red eléctrica artesanal}
+\label{fig:barrio_red}
+\footnotesize\textit{Fuente: Autor.}
+\end{figure}
+
+El resultado es una red inestable, con alta probabilidad de fallas y un riesgo eléctrico real para quienes viven en el barrio. El riesgo no viene solo de la red exterior: las instalaciones internas de las viviendas, muchas veces construidas con materiales inflamables, aumentan la probabilidad de incendios y electrocuciones.
+
+El 100\% de los 20 expertos consultados consideró que la normalización es importante para reducir esos riesgos. Las respuestas coinciden en que una red que cumple el RETIE elimina las conexiones inseguras, facilita la inspección y dificulta la manipulación fraudulenta de la infraestructura. Pero varios expertos — E9 y E11 entre ellos — advirtieron que la normalización física no garantiza por sí sola que la red se mantenga en condiciones seguras: si los usuarios reinciden en conexiones ilegales sin que haya seguimiento, los riesgos vuelven. Los datos completos están en la Tabla~\ref{tab:encuesta_red} del Anexo~\ref{anx:encuesta}.
+
+\subsection{Esquema de medición y facturación en áreas especiales}
+\label{subsec:medicion}
+
+Sin medidores individuales, la medición se hace a través de macromedidores o totalizadores comunitarios, bajo los esquemas diferenciales de facturación previstos en el DUR 1073 de 2015. Esos esquemas permiten proyecciones de consumo basadas en cargas contratadas o consumos históricos de usuarios similares, con porcentajes de participación donde la responsabilidad de la facturación recae en un suscriptor comunitario \parencite{DUR1073_2015, CabralesSanjuan2015, MendezFuentes2013, SSPD2020}.
+
+El problema es que el macromedidor no discrimina. Mide todo lo que entra al barrio: las pérdidas técnicas de la red interna, el consumo de las conexiones clandestinas, el alumbrado hechizo. Todo eso termina en la factura del suscriptor comunitario, y los usuarios pagan por pérdidas y consumos que no son suyos. Eso genera una percepción de injusticia que, combinada con el temor al medidor individual, alimenta directamente la resistencia a la normalización.
+
+\subsection{Caracterización climática y su incidencia en la demanda energética}
+\label{subsec:clima_demanda}
+
+El 54\% de los 195 municipios del área de análisis se ubica en piso térmico cálido seco y el 38\% en cálido húmedo. Solo el 8\% restante corresponde a climas templados y fríos (ver Anexo~\ref{anx:municipios_clima}). En climas cálidos, los ventiladores y los aires acondicionados no son lujos: son necesidades básicas. Y las viviendas de los BS, construidas sin ningún criterio de eficiencia térmica ni de construcción sostenible, los requieren más que las viviendas formales.
+
+El PIEC 2024--2028 establece un consumo residencial estándar de \textbf{145~kWh-mes} para clima cálido húmedo y \textbf{110~kWh-mes} para cálido seco \parencite{UPME2025}. La curva de carga diaria de la Figura~\ref{fig:curva_carga} muestra que los picos de demanda en estos climas se concentran en las horas de mayor calor y en las horas nocturnas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figura_curva_carga.png}
+\caption{Curva de carga diaria; piso térmico cálido seco y húmedo}
+\label{fig:curva_carga}
+\footnotesize\textit{Fuente: Extraído de \parencite{UPME2025}.}
+\end{figure}
+
+\subsection{Consumo real en los BS versus proyecciones estándar}
+\label{subsec:consumo_real}
+
+Para conocer el consumo real dentro de los BS — no el estándar del PIEC — se procesaron los datos de la plataforma O3 de la SSPD con los siguientes filtros:
+
+\begin{itemize}
+    \item Departamentos de la región Caribe.
+    \item Municipios con reportes de suscriptores de Air-e y Afinia.
+    \item Pisos térmicos cálido húmedo y cálido seco.
+    \item Usuarios residenciales de estrato 1.
+    \item Municipios con pago del subsidio FOES.
+    \item Periodo: 2023--2025.
+\end{itemize}
+
+Los resultados, presentados en el Anexo~\ref{anx:consumo_sspd}, muestran una brecha importante con los estándares. En piso térmico \textbf{cálido húmedo}, el consumo promedio fue de \textbf{235~kWh-mes} (2023), \textbf{232~kWh-mes} (2024) y \textbf{228~kWh-mes} (2025): entre el 61\% y el 62\% más que el estándar del PIEC para ese clima. En piso térmico \textbf{cálido seco}, los registros fueron \textbf{218~kWh-mes} (2023), \textbf{214~kWh-mes} (2024) y \textbf{211~kWh-mes} (2025): entre el 92\% y el 98\% más que el estándar \parencite{SSPD2025}.
+
+La diferencia se explica por el clima, el uso de equipos de baja eficiencia, las pérdidas por conexiones deficientes y los errores de estimación propios de la medición colectiva. Esto tiene una consecuencia directa para el diseño de los sistemas AGPE: si se dimensionan usando los valores del PIEC, van a quedar subdimensionados respecto al consumo real, y el ahorro en factura que se le promete al usuario no va a materializarse. El Capítulo~\ref{chap:tecnico} usa estos valores reales como parámetros de base.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Impacto de las Problemáticas en Usuarios y Operadores de Red}
+\label{sec:impacto}
+% ─────────────────────────────────────────────────────────────
+
+La subnormalidad eléctrica no es solo un problema técnico de infraestructura. Sus consecuencias son concretas y afectan de formas distintas a las comunidades, a los OR y al conjunto del sistema eléctrico de la región.
+
+\subsection{Impacto en la integridad física de las personas}
+\label{subsec:impacto_fisico}
+
+Una red sin protecciones, con conexiones informales y en viviendas construidas con materiales inflamables es, antes que todo, un riesgo para la vida. Los cortocircuitos, las sobrecargas, los incendios y los accidentes eléctricos no son eventos hipotéticos en los BS: son consecuencias documentadas de esas condiciones. Quienes intentan realizar conexiones fraudulentas sin conocimiento técnico se exponen a descargas eléctricas y caídas de altura sin ninguna medida de protección.
+
+El 100\% de los expertos consultados confirmó que la normalización es importante para reducir esos riesgos. Varios con experiencia de campo señalaron que la mejora en las condiciones de seguridad es el primer beneficio que los usuarios perciben y valoran después de una normalización, incluso antes de ver cambios en la continuidad del servicio.
+
+\subsection{Impacto en la calidad y continuidad de la prestación del servicio}
+\label{subsec:impacto_calidad}
+
+La regulación vigente no exige a los OR cumplir metas de calidad y continuidad dentro de los BS; su responsabilidad formal termina en el macromedidor \parencite{VillagranRomero2022}. Dentro del barrio, la red interna es lo que es. Y los números de la región Caribe ya de por sí son críticos: Afinia registra un SAIFI superior a 43,3 interrupciones anuales y un SAIDI que supera las 72,2 horas promedio al año; Air-e se ubica en rangos de 28,6 a 43,3 interrupciones y 49,5 a 72,2 horas \parencite{XM2024}. Al interior de los BS, sin la infraestructura de soporte del SDL, esas cifras son peores.
+
+Los expertos consultados son matizados en este punto. La mayoría confirma que los usuarios perciben la mejora después de la normalización principalmente a través de menos cortes y menos daños a electrodomésticos. Pero E4 y E9 advierten que esa percepción es frágil: si la calidad no mejora de manera sostenida o si el OR desaparece del barrio después de terminar las obras, la percepción se vuelve negativa, aunque haya habido mejoras técnicas reales que el usuario no puede identificar visualmente.
+
+\subsection{Impacto económico y financiero}
+\label{subsec:impacto_economico}
+
+Las pérdidas del BS se traducen en el componente de Pérdidas Reconocidas (PR) de la tarifa, que en la región Caribe alcanza valores muy por encima del promedio nacional. En 2023, el promedio nacional fue de \textbf{\$80,02/kWh}, mientras que Air-e registró \textbf{\$209,43/kWh} y Afinia \textbf{\$176,57/kWh} — un 161\% y un 120,7\% por encima de la media, respectivamente \parencite{UPME2025}. Ese exceso lo pagan todos los usuarios de la región, normalizados o no.
+
+El Régimen Transitorio Especial del artículo 318 de la Ley 1955 de 2019 habilitó a estos OR a trasladar un mayor porcentaje de pérdidas al usuario final durante cinco años, condicionado a que reflejara las inversiones realizadas \parencite{Ley1955_2019}. El efecto paradójico fue encarecer el servicio precisamente en la región donde los usuarios tienen menor capacidad de pago.
+
+Para el OR, el impacto se materializa en cartera irrecuperable. Con tasas de recaudo de entre el 1\% y el 25\% en la mayoría de los sectores subnormales, el OR asume el costo de la energía consumida sin poder recuperarla. Ese hueco fiscal reduce la capacidad de inversión en los planes quinquenales y deteriora progresivamente la infraestructura — un círculo que perjudica a todos.
+
+\subsection{Impacto en el desarrollo territorial}
+\label{subsec:impacto_territorial}
+
+La normalización eléctrica no es solo energía. \textcite{MosqueraNoguera2005} documentan que la formalización del servicio eléctrico es el primer paso que habilita la llegada de otros servicios urbanos a un asentamiento. El experto E12 lo describe con precisión a partir de su experiencia: cuando un barrio se normaliza, \textit{``poco a poco comienzan a llegar otras entidades y servicios, como los de acueducto y gas, fortaleciendo el desarrollo integral de la comunidad''}. La factura eléctrica se convierte en el primer documento que acredita la existencia formal de la familia ante el Estado: permite registrarse en el Sisbén, acceder a programas sociales y, en muchos casos, matricular a los hijos en el colegio.
+
+Esa es la dimensión del impacto que más se subestima en los análisis técnicos, y la que mejor justifica el esfuerzo de hacer estos proyectos bien.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Consulta a Expertos: Perspectivas del Sector sobre la Normalización}
+\label{sec:consulta_expertos}
+% ─────────────────────────────────────────────────────────────
+
+Para complementar el diagnóstico con información que la literatura técnica no captura fácilmente, se diseñó y aplicó una encuesta a 20 profesionales del sector eléctrico y del sector público con experiencia directa en proyectos de normalización.
+
+\subsection{Descripción del instrumento y perfil de los expertos}
+\label{subsec:instrumento}
+
+El instrumento combinó preguntas de escala Likert y preguntas de respuesta abierta, todas de obligatoria respuesta. Se aplicó en un formulario de Google Forms para facilitar la participación de profesionales distribuidos por todo el país. El objetivo fue identificar, desde la experiencia de quienes trabajan en esto, qué tan efectivos son los proyectos de normalización, cómo los perciben los usuarios y qué cuellos de botella se repiten. La ficha técnica completa está en la Tabla~\ref{tab:ficha_tecnica} del Anexo~\ref{anx:encuesta}.
+
+Los 20 expertos — identificados como E1 a E20 — tienen perfiles variados: 15 ingenieros eléctricos, 2 administradores públicos, 2 profesionales de ciencias sociales y 1 ingeniero civil. Esa diversidad fue deliberada: los proyectos de normalización no son solo técnicos, y una muestra de puros ingenieros habría perdido perspectiva. El 65\% de los encuestados tiene más de tres años de experiencia en normalización; cuatro de ellos superan los nueve años. El 80\% proviene exclusivamente del sector público, lo cual es coherente con el objeto de estudio: el PRONE es un programa de financiamiento público. El detalle completo del perfil está en la Tabla~\ref{tab:perfil_expertos} del Anexo~\ref{anx:encuesta}.
+
+\subsection{Resultados: Impacto en la red eléctrica y percepción de los usuarios}
+\label{subsec:resultados_red}
+
+\textbf{Reducción de pérdidas no técnicas (P7):} La calificación promedio fue 3,4 sobre 5, con distribución heterogénea: cinco expertos dieron el máximo y varios dieron 2. La reducción de pérdidas no es un resultado automático de la normalización; depende fuertemente del contexto de cada proyecto.
+
+\textbf{Reducción de fallas MT-BT (P9):} El 45\% reportó haber observado una reducción efectiva de fallas. Igual porcentaje dijo no tener información suficiente para responder, lo que probablemente refleja que los OR no sistematizan bien esos datos.
+
+\textbf{Importancia para reducir accidentes eléctricos (P10):} El 100\% consideró que sí es importante. Las argumentaciones varían: los más técnicos enfatizan el cumplimiento del RETIE; E9 y E11 señalan que la normalización no garantiza que la red se mantenga segura si los usuarios reinciden en conexiones ilegales sin seguimiento posterior.
+
+\textbf{Percepción de los usuarios (P11):} El patrón que reportan los expertos con experiencia de campo es consistente: los usuarios perciben la mejora principalmente a través de menos cortes y menos daños a electrodomésticos. E12 agrega una observación que vale la pena destacar: en algunos casos se le ha cobrado al usuario entre \$400.000 y más solo en costos de conexión inicial, lo que hace que muchas familias prefieran no conectarse aunque quieran hacerlo.
+
+\subsection{Resultados: Impacto en el recaudo y perspectiva del usuario frente a la facturación individual}
+\label{subsec:resultados_recaudo}
+
+\textbf{Mejora en el recaudo tras la individualización (P8):} 13 de 20 expertos creen que la individualización mejora al menos parcialmente el recaudo. Los seis que discrepan señalan que esa mejora depende de la capacidad de pago de los usuarios y de si el OR condona las deudas previas. E11 plantea el caso más frecuente: la normalización produce el tránsito de la subnormalidad a la cartera en normalidad, sin que el recaudo mejore de verdad.
+
+\textbf{Posición del usuario frente a la legalización (P12):} La posición predominante es resistencia o rechazo inicial. La intensidad varía: es más fuerte en los sectores donde la conexión informal lleva más años y donde hay intermediarios con interés económico en mantener el esquema colectivo. E9 resume bien el dilema del usuario: si la calidad mejora de verdad y el costo es manejable, la legalización tiene sentido; si alguna de las dos condiciones falla, la pregunta ``¿para qué me legalizo?'' no tiene respuesta.
+
+\textbf{Impacto del cambio en la factura (P13):} Casi unanimidad: el impacto es crítico. Pasar de \$0 o de una cuota fija baja a una factura variable de \$100.000--\$200.000 mensuales para usuarios de clima cálido desajusta el presupuesto familiar. E11 advierte sobre el riesgo más serio: si la normalización no viene acompañada de educación sobre eficiencia energética y de revisión de las instalaciones internas, el choque económico puede ser tan fuerte que los usuarios vuelvan a las conexiones ilegales. Eso es exactamente lo que justifica incluir el AGPE en estos proyectos: al reducir el consumo neto de la red, hace la transición económicamente menos traumática.
+
+\subsection{Resultados: Estrategias para mejorar la acogida y casos documentados}
+\label{subsec:resultados_estrategias}
+
+\textbf{Importancia del acompañamiento social (P15):} El hallazgo más rotundo de toda la consulta. Los 20 expertos, sin excepción, dieron 5 sobre 5. No hubo matices. El acompañamiento social no es optativo en un proyecto de normalización: es la condición que determina si lo que se instala se sostiene en el tiempo \parencite{SerranoRueda2019, MendezFuentes2013}.
+
+\textbf{Principal obstáculo (P16):} Tres factores que se retroalimentan, presentes en prácticamente todas las respuestas:
+
+\begin{enumerate}[label=\roman*)]
+    \item El miedo al incremento en la factura, especialmente resistente cuando hay suscriptores comunitarios con interés económico en mantener el esquema colectivo.
+    \item La desconfianza en el OR, acumulada durante años de percibir un servicio de baja calidad sin posibilidad de reclamación individual.
+    \item La desinformación sobre qué implica la normalización, que actores interesados en el statu quo aprovechan para generar oposición organizada.
+\end{enumerate}
+
+\textbf{Estrategias complementarias (P14):} Las más frecuentes son la socialización previa con información clara, el acompañamiento durante las obras, la condonación o refinanciación de deudas históricas y el seguimiento post-normalización. Ningún experto cree que una sola estrategia sea suficiente: la mayoría seleccionó al menos tres combinadas.
+
+\textbf{Casos documentados (P17):} Las experiencias de primera mano que compartieron los expertos ilustran bien lo que funciona y lo que no:
+
+\begin{itemize}
+    \item \textbf{Nariño -- CEDENAR} (E5): impacto positivo. El acompañamiento social durante la implementación fue el factor determinante. Hubo resistencia inicial por el incremento en la factura, pero se superó.
+
+    \item \textbf{Isla Fuerte, Córdoba -- 2018} (E9): impacto mixto. El sistema híbrido funcionó bien técnicamente, pero un grupo de usuarios reclamó servicio gratuito porque el Estado los había conectado. El problema fue la brecha entre el beneficio del servicio y la aceptación del esquema de pago, agravada por la falta de claridad previa sobre las reglas tarifarias.
+
+    \item \textbf{Patia -- Cauca} (E4): fracaso. La causa fue un proceso pedagógico insuficiente antes de la intervención.
+
+    \item \textbf{Brisas del Venado} (E17): la comunidad bloqueó la instalación de medidores AMI. El sistema de telelectura se percibió como una amenaza a la privacidad y un mecanismo de control sin margen de negociación.
+
+    \item \textbf{Costa Caribe -- varios proyectos PRONE} (E1, E15): resultados negativos recurrentes, atribuidos a desinformación, demoras en la ejecución y oposición comunitaria que en algunos casos llevó a la cancelación completa del proyecto.
+
+    \item \textbf{Electrohuila} (E13): experiencia positiva en campañas de legalización, con mejora en pérdidas y recaudo.
+
+    \item \textbf{Caquetá} (E20): caso de éxito, en contraste con fracasos en la costa Caribe. El factor determinante fue el esquema de medición adoptado.
+\end{itemize}
+
+\subsection{Síntesis de hallazgos de la consulta}
+\label{subsec:sintesis_consulta}
+
+Los hallazgos de la consulta que se integran directamente a la metodología del Capítulo~\ref{chap:metodologia} son seis:
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=1.5cm, itemsep=8pt]
+
+    \item La normalización es reconocida como necesaria por todos los actores del sector, pero su éxito no depende principalmente de la calidad técnica de la infraestructura.
+
+    \item El acompañamiento social es condición necesaria, no componente accesorio. Los 20 expertos lo calificaron con 5/5. No presentar al PRONE un proyecto con un componente robusto de gestión social es un error que se paga caro en la ejecución.
+
+    \item El principal obstáculo no es técnico: es el miedo al incremento en la factura y la desconfianza en el OR. Cualquier estrategia que no aborde esto directamente tiene altas probabilidades de fracasar.
+
+    \item El impacto tarifario puede generar reincidencia en la subnormalidad. Eso fundamenta técnica y socialmente la inclusión del AGPE: al reducir el consumo neto de la red, modera el choque económico de la transición.
+
+    \item La medición inteligente (AMI) es técnicamente deseable, pero necesita gestión social especializada. El caso de Brisas del Venado es un riesgo real, no teórico.
+
+    \item Los patrones de fracaso en la región Caribe son sistémicos. La combinación de pobreza extrema, informalidad arraigada, comunidades étnicas diversas y desconfianza institucional acumulada exige estrategias diferenciadas respecto a otras regiones del país.
+
+\end{enumerate}

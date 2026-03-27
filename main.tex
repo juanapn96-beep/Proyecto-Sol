@@ -1,0 +1,188 @@
+% ============================================================
+%  main.tex — Documento principal
+%  Metodología para la normalización de redes eléctricas en
+%  barrios subnormales incluyendo AGPE — PRONE
+%  Autora: Dayanna Soley Mendez Devia
+%  Universidad Distrital Francisco José de Caldas — 2025
+% ============================================================
+
+\documentclass[12pt, letterpaper, oneside]{report}
+
+% ── Codificación y lenguaje ─────────────────────────────────
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[spanish, es-tabla, es-nodecimaldot]{babel}
+\usepackage{csquotes}
+
+% ── Tipografía ──────────────────────────────────────────────
+\usepackage{mathptmx}
+\usepackage{microtype}
+\linespread{1.5}
+
+% ── Márgenes (ICONTEC) ──────────────────────────────────────
+\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% ── Matemáticas ─────────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{siunitx}
+\sisetup{
+    output-decimal-marker  = {,},
+    group-separator        = {\,},
+    group-minimum-digits   = 4
+}
+
+% ── Gráficos ────────────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[labelfont=bf, font=small, justification=centering]{caption}
+\usepackage{subcaption}
+\graphicspath{{imagenes/}}
+
+% ── Tablas ──────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage[table, xcdraw]{xcolor}
+\definecolor{grisclaro}{RGB}{242, 242, 242}
+\definecolor{grismedio}{RGB}{217, 217, 217}
+\definecolor{azuludbc}{RGB}{0, 84, 166}
+
+% ── Listas ──────────────────────────────────────────────────
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5cm, itemsep=2pt}
+\setlist[enumerate]{leftmargin=1.5cm, itemsep=2pt}
+
+% ── Encabezado y pie de página ──────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{26pt}
+\addtolength{\topmargin}{-11pt}
+
+% ── Hipervínculos ───────────────────────────────────────────
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\urlstyle{same}
+
+% ── Bibliografía — APA con biblatex/biber ───────────────────
+\usepackage[
+    backend      = biber,
+    style        = apa,
+    natbib       = true,
+    sortcites    = true,
+    sorting      = nyt,
+    maxcitenames = 3,
+    mincitenames = 1,
+    uniquelist   = false,
+    dashed       = false
+]{biblatex}
+\addbibresource{referencias.bib}
+
+% ── Apéndices ───────────────────────────────────────────────
+\usepackage[toc, page]{appendix}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+
+% ── Formato de títulos de capítulos ─────────────────────────
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+    {\normalfont\large\bfseries\centering}
+    {\MakeUppercase{\chaptertitlename}\ \thechapter}
+    {10pt}
+    {\Large\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+
+\titleformat{\section}
+    {\normalfont\normalsize\bfseries}
+    {\thesection}{1em}{}
+\titleformat{\subsection}
+    {\normalfont\normalsize\bfseries\itshape}
+    {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+    {\normalfont\normalsize\itshape}
+    {\thesubsubsection}{1em}{}
+
+% ── Párrafos ────────────────────────────────────────────────
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% ── Profundidad del índice ──────────────────────────────────
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+% ── Notas al pie ────────────────────────────────────────────
+\usepackage[hang, flushmargin]{footmisc}
+
+% ── Metadatos PDF ───────────────────────────────────────────
+\hypersetup{
+    pdftitle   = {Metodología para la normalización de redes eléctricas
+                  en barrios subnormales incluyendo AGPE - PRONE},
+    pdfauthor  = {Dayanna Soley Mendez Devia},
+    pdfkeywords= {barrios subnormales, normalización, AGPE, PRONE,
+                  redes eléctricas, metodología}
+}
+
+% ── Comando auxiliar para citar leyes por nombre ────────────
+\newcommand{\citeley}[2]{\textit{#1} \parencite{#2}}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ── Páginas preliminares (numeración romana) ─────────────────
+\pagenumbering{roman}
+\pagestyle{empty}
+
+\input{portada}
+\cleardoublepage
+\input{dedicatoria}
+\cleardoublepage
+\input{agradecimientos}
+\cleardoublepage
+
+\pagestyle{fancy}
+\tableofcontents
+\cleardoublepage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+\cleardoublepage
+
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tablas}
+\cleardoublepage
+
+\input{resumen}
+\cleardoublepage
+\input{abstract}
+\cleardoublepage
+\input{siglas}
+\cleardoublepage
+
+% ── Capítulos (numeración arábiga) ──────────────────────────
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+\input{capitulo1_introduccion}
+\input{capitulo2_diagnostico}
+\input{capitulo3_normativo}
+\input{capitulo4_tecnico}
+\input{capitulo5_metodologia}
+\input{capitulo6_conclusiones}
+
+% ── Referencias ─────────────────────────────────────────────
+\printbibliography[heading=bibintoc, title={Referencias Bibliográficas}]
+
+% ── Anexos ──────────────────────────────────────────────────
+\begin{appendices}
+\input{anexos}
+\end{appendices}
+
+\end{document}

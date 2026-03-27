@@ -1,0 +1,174 @@
+% ============================================================
+%  capitulo1_introduccion.tex
+%  Capítulo 1: Introducción
+% ============================================================
+
+\chapter{Introducción}
+\label{chap:introduccion}
+
+Garantizar el acceso universal a la energía eléctrica en condiciones dignas sigue siendo uno de los desafíos más persistentes de la política pública colombiana. Aunque los indicadores de cobertura han mejorado sostenidamente en las últimas décadas, esa cifra agrega y oculta: detrás de ella hay más de 314.000 familias que reciben electricidad a través de conexiones irregulares, sin cumplir ningún estándar técnico ni legal. Estos territorios, conocidos como barrios subnormales (BS), no son el resultado de descuidos administrativos — son la consecuencia de décadas de urbanización no planificada, desplazamiento forzado y exclusión social, y cargan con una historia de relación tensa con el Estado y con las empresas prestadoras del servicio \parencite{SSPD2020}. Cualquier intervención que ignore esa historia está condenada a fracasar, independientemente de qué tan bien esté diseñada eléctricamente \parencite{SerranoRueda2019, VillagranRomero2022}.
+
+El Gobierno Nacional creó el Programa de Normalización de Redes Eléctricas (PRONE) para atacar este problema con recursos públicos. En 2024, el programa amplió su alcance para incluir sistemas de Autogeneración a Pequeña Escala (AGPE) dentro de los proyectos de normalización, como parte de los lineamientos del Plan Nacional de Desarrollo 2022--2026. El cambio normativo tiene sentido: si la autogeneración a partir de fuentes no convencionales de energía renovable (FNCER) reduce la factura del usuario normalizado, la resistencia comunitaria al medidor individual baja. El problema es que ese cambio llegó sin una guía metodológica clara para los Operadores de Red (OR) que deben implementarlo.
+
+Esta monografía construye esa guía. La propuesta parte de la caracterización de las condiciones reales de los BS, revisa el marco normativo vigente, sistematiza lo que ha funcionado y lo que no en experiencias documentadas en el país, y consulta directamente a quienes trabajan en estos proyectos. El resultado es una hoja de ruta práctica, adaptada al contexto colombiano, para que los OR puedan formular, estructurar y presentar proyectos de normalización con AGPE que sean elegibles ante el Ministerio de Minas y Energía (MME).
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Planteamiento del Problema}
+\label{sec:planteamiento}
+% ─────────────────────────────────────────────────────────────
+
+Que Colombia tenga una alta cobertura eléctrica no significa que todos los usuarios reciban un servicio en condiciones dignas. El Plan de Expansión de la Cobertura de Energía Eléctrica (PIEC) 2024--2028 identificó \textbf{524.569 viviendas} sin servicio o sin soluciones apropiadas de suministro en 2023 \parencite{UPME2025}. Ese número ya es alto, y aun así subestima el problema real, porque no captura a las familias que sí tienen electricidad pero de manera informal.
+
+Los BS son el caso más representativo de esa informalidad. La definición legal del Decreto Único Reglamentario (DUR) 1073 de 2015 los describe como asentamientos urbanos donde la energía se obtiene a través de derivaciones no autorizadas del Sistema de Distribución Local (SDL), sin aprobación del OR \parencite{DUR1073_2015}. Según la Superintendencia de Servicios Públicos Domiciliarios (SSPD), entre 2000 y 2020 se certificaron \textbf{1.644 asentamientos} de este tipo en el país, habitados por \textbf{314.333 familias}. Estos barrios están distribuidos en 300 municipios de 17 departamentos, y el 90\% de las familias afectadas se concentra en siete departamentos de la región Caribe: Atlántico, Bolívar, Cesar, Córdoba, La Guajira, Magdalena y Sucre, atendidos principalmente por Air-e y Afinia \parencite{SSPD2020}.
+
+Las consecuencias de vivir en un BS son concretas para todos los involucrados. Las familias tienen redes construidas sin ningún criterio técnico, con conductores de calibres heterogéneos, sin protecciones y sin medición individual, lo que se traduce en cortes frecuentes, fluctuaciones de voltaje que dañan electrodomésticos y un riesgo real de accidentes eléctricos \parencite{SerranoRueda2019, VillagranRomero2022}. Para el OR, la situación implica pérdidas comerciales cuantiosas: la energía que consume el BS generalmente presenta bajo recaudo. Y esas pérdidas no se quedan en el OR — parte de ellas termina trasladándose a los usuarios regularizados de la región a través del componente de Pérdidas Reconocidas en la tarifa \parencite{CastilloQuintana1991, ReySerrato2009}.
+
+Los OR intentan facturar mediante métodos alternativos: porcentajes de participación por capacidad instalada, estimaciones históricas de consumo, macromedidores con reparto entre usuarios. Ninguno de estos métodos mide el consumo real de cada hogar ni distribuye equitativamente los costos de las pérdidas, lo que genera tensiones permanentes entre el OR y la comunidad \parencite{DUR1073_2015, ReySerrato2009}.
+
+El PRONE existe precisamente para financiar la solución. Con todo, después de dos décadas de operación, el problema persiste. En 2024 había 703.000 viviendas sin título en el país, un 26\% más que en 2020 \parencite{DANE2024a}. La informalidad habitacional crece más rápido de lo que el programa puede intervenir.
+
+El PND 2022--2026 intentó darle un nuevo impulso al incluir los sistemas AGPE como componente financiable dentro del PRONE \parencite{Ley2294_2023}. La lógica es válida: si la autogeneración a partir de FNCER reduce la factura del usuario normalizado, la resistencia al medidor individual se vuelve más manejable. El Decreto 1023 de 2024 reglamentó ese cambio. Sin embargo, la vigencia 2024 del PRONE fue elocuente: ninguno de los proyectos presentados cumplió con la totalidad de los requisitos del MME \parencite{MME2025}.
+
+Ese resultado no es solo una falla técnica. Es la señal de que formular un proyecto de normalización que integre AGPE dentro del marco del PRONE requiere articular simultáneamente dimensiones técnicas, normativas, financieras y sociales que ninguna herramienta existente combina. El único antecedente encontrado es el trabajo de \textcite{AriasArias2017}, que documenta el procedimiento de asignación de recursos del PRONE para proyectos de normalización convencional, publicado siete años antes de que el AGPE se convirtiera en un gasto elegible.
+
+La pregunta que organiza esta monografía es: \textbf{¿cómo deben los OR estructurar proyectos de normalización en barrios subnormales que incluyan sistemas de AGPE, para que sean técnicamente viables, financieramente sostenibles, normativamente elegibles para el PRONE y socialmente aceptados por las comunidades beneficiarias?}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Marco Referencial}
+\label{sec:marco}
+% ─────────────────────────────────────────────────────────────
+
+\subsection{Contexto latinoamericano sobre asentamientos informales y energía}
+\label{subsec:contexto_global}
+
+América Latina es la segunda región más urbanizada del mundo y la que tiene la mayor proporción de población viviendo en asentamientos informales: alrededor del 36\%, frente al 5\% de Europa \parencite{AgenciaIberoamericana2017}. No es un fenómeno estático. La migración rural, el desplazamiento forzado, la informalidad laboral y la especulación del suelo urbano siguen alimentando el crecimiento de estos barrios, y Colombia no es la excepción.
+
+Lo que diferencia el caso colombiano es la velocidad con la que los habitantes se conectan a la red eléctrica una vez que se establecen en un nuevo territorio. \textcite{MosqueraNoguera2005} documentan cómo la difusión informal de la energía es prácticamente lo primero que ocurre en un nuevo asentamiento — la única opción disponible cuando el Estado no llega a tiempo.
+
+\textcite{Fernandes2011} señala algo fundamental para entender por qué tantos proyectos de normalización fracasan: regularizar un asentamiento no es instalar infraestructura. Requiere reconocimiento legal del territorio, fortalecimiento de la organización comunitaria y mejora integral de las condiciones de vida. Un proyecto que se limita a los postes y los cables sin trabajar el contexto social tiene una tasa de éxito significativamente menor.
+
+El compromiso de Colombia con el Objetivo de Desarrollo Sostenible (ODS) número 7, que busca garantizar acceso a energía asequible y moderna para todos antes de 2030, da urgencia política a esta discusión. La incorporación del AGPE en el PRONE es una expresión concreta de ese compromiso.
+
+\subsection{Los barrios subnormales en Colombia: cómo se forman y por qué persisten}
+\label{subsec:bs_colombia}
+
+Los BS en Colombia no son accidentes urbanos. Son la consecuencia del conflicto armado, la migración económica, la escasez de suelo urbanizado asequible y la debilidad histórica de la política de vivienda popular \parencite{UribeCastro2011}. Una vez que una comunidad se instala en un terreno de manera informal, construye sus propias dinámicas sociales y económicas, y su propia relación con los servicios públicos. Entender eso es condición necesaria para diseñar cualquier intervención.
+
+Técnicamente, las redes eléctricas en los BS son construidas sin profesionales calificados y sin cumplir el Reglamento Técnico de Instalaciones Eléctricas (RETIE). Conductores de distintos calibres mezclados, sin protecciones coordinadas, sin medición individual \parencite{SerranoRueda2019, VillagranRomero2022}. Esa situación genera pérdidas técnicas y no técnicas que el OR no puede recuperar.
+
+El problema económico es quizás el más difícil de resolver. Los BS de la región Caribe son predominantemente estrato 1 y 2, con índices de pobreza multidimensional entre los más altos del país y una proporción significativa de hogares cuyos ingresos no alcanzan para cubrir sus gastos básicos \parencite{DANE2024b}. Pedirle a esas familias que paguen una factura individual después de años de acceso informal gratuito o de muy bajo costo genera una resistencia comprensible que no puede resolverse solo con regulación.
+
+A esto se suma la dimensión institucional: muchos usuarios perciben la normalización como una amenaza, no como un beneficio. Superar esa percepción exige procesos de socialización y acompañamiento que demandan tiempo y recursos \parencite{SerranoRueda2019, MendezFuentes2013}. El marco normativo completo que regula esta problemática se desarrolla en el Capítulo~\ref{chap:normativo}.
+
+\subsection{Estado del arte}
+\label{subsec:estado_arte}
+
+La literatura técnica sobre normalización de redes en asentamientos informales en Colombia es escasa en relación con la magnitud del problema. Lo que existe se centra principalmente en la gestión de pérdidas no técnicas y en la descripción de estrategias implementadas por los OR.
+
+\subsubsection{Experiencias documentadas de normalización y control de pérdidas}
+
+\textcite{CastilloQuintana1991} realizaron una de las primeras evaluaciones económicas y sociales de un proyecto de distribución en zonas subnormales de Cartagena, usando un modelo de normalización por tramos secundarios con medición colectiva diferenciada. El trabajo tiene más de tres décadas, y sus hallazgos sobre la tensión entre los esquemas de recaudo y la capacidad económica real de los usuarios siguen siendo completamente vigentes.
+
+\textcite{MendezFuentes2013} documentaron la estrategia de la Electrificadora de Santander entre 2010 y 2014, que combinó infraestructura antifraude, la ``Red Chilena'' y medición inteligente en modalidad prepago. Se normalizaron más de 110.000 usuarios. El hallazgo central: la tecnología por sí sola no sostiene los resultados sin gestión social paralela.
+
+El caso más completo disponible en la literatura es el de \textcite{SerranoRueda2019}, que sistematiza la experiencia de la Compañía Energética de Occidente (CEO) en Popayán entre 2014 y 2018. En cuatro años se normalizaron 41 asentamientos con 12.000 habitantes, el recaudo pasó de 0\% a más del 97\% y el consumo por usuario bajó un 67\%. Ese resultado no ocurrió solo por la infraestructura: requirió la articulación de más de diez instituciones, un plan educativo sostenido y la condonación de las deudas históricas de los usuarios.
+
+\textcite{VillagranRomero2022} analizó las condiciones de los BS desde la perspectiva del OR, documentando las limitaciones normativas que enfrentan las empresas para intervenir estos territorios.
+
+\subsubsection{Estudios de factibilidad y optimización de pérdidas}
+
+\textcite{CabralesSanjuan2015} estimaron un costo promedio de \$1.093.052 por usuario en proyectos de normalización urbana en CENS, e identificaron que la falta de certificación de los BS por parte de los entes territoriales es una de las barreras más frecuentes para participar en el PRONE.
+
+\textcite{PenaMantilla2020} concluyeron, a partir de un caso de EPM en Itagüí, que legalizar y controlar usuarios genera mayores beneficios a menor costo que normalizar completamente la infraestructura, aunque advirtieron que sin vigilancia posterior los usuarios normalizados tienden a reincidir en conexiones ilegales.
+
+\subsubsection{Procedimientos y gestión del PRONE}
+
+El único trabajo que aborda directamente los procedimientos del PRONE es el de \textcite{AriasArias2017}, que documentó los requisitos históricos de presentación y los criterios de evaluación del MME. Es una referencia valiosa, publicada en 2017 — siete años antes de que el AGPE se convirtiera en gasto elegible — y no aborda las dimensiones sociales e institucionales de los proyectos.
+
+\subsubsection{Autogeneración a pequeña escala en contextos de distribución}
+
+A nivel global hay abundante literatura sobre dimensionamiento fotovoltaico, gestión de excedentes e impactos en la calidad de tensión. Lo que no existe es su aplicación específica a la normalización de redes en comunidades de bajos ingresos, articulada con un mecanismo de financiamiento público como el PRONE. Los referentes normativos disponibles (Resolución CREG 174 de 2021 y Decreto 1023 de 2024) establecen el marco regulatorio, sin ofrecer orientación metodológica sobre cómo integrar ese componente en el proceso de normalización.
+
+No existe, a la fecha, una metodología que combine normalización y AGPE dentro del marco del PRONE, considerando al mismo tiempo las dimensiones técnica, financiera, normativa y social. Esa es la contribución central de este trabajo.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Justificación}
+\label{sec:justificacion}
+% ─────────────────────────────────────────────────────────────
+
+El artículo 365 de la Constitución Política de 1991 es directo: \textit{``los servicios públicos son inherentes a la finalidad social del Estado. Es deber del Estado asegurar su prestación eficiente a todos los habitantes del territorio nacional''} \parencite{ConstitucionPolitica1991}. No es una aspiración. Es una obligación. Y mientras haya 314.000 familias recibiendo energía de manera informal, esa obligación no está cumplida.
+
+Quienes viven en los BS no eligieron esa condición. Sus barrios surgieron como respuesta al conflicto armado, al desplazamiento forzado y a la ausencia histórica de vivienda asequible \parencite{UribeCastro2011}. Son mayoritariamente estrato 1 y 2, con capacidades de pago que el diseño de cualquier proyecto debe reconocer. Sus redes representan un riesgo físico real para los habitantes, para sus electrodomésticos y para sus viviendas.
+
+Para estas comunidades, la normalización eléctrica no es solo un asunto de energía. \textcite{MosqueraNoguera2005} documentan que es el primer paso para que lleguen otros servicios: alumbrado público, alcantarillado, acceso al Sisbén, educación. La factura eléctrica se convierte en el primer documento que acredita que la familia existe formalmente para el Estado.
+
+Desde la perspectiva del OR, normalizar tampoco es opcional. El componente de Pérdidas Reconocidas en la tarifa de Air-e supera en un 161\% al promedio nacional, y el de Afinia en un 120,7\% \parencite{UPME2025}. Eso se traduce en tarifas más altas para todos los usuarios de la región y en una capacidad de inversión mermada que frena la mejora del servicio.
+
+El AGPE añade una justificación adicional. En la región Caribe, con alta radiación solar y consumos residenciales que superan los promedios nacionales por el uso de climatización, el potencial de ahorro a través de la autogeneración es real y significativo. Si ese ahorro modera el impacto de la factura individual después de la normalización, uno de los principales factores de resistencia comunitaria se reduce. Esa es la apuesta del Decreto 1023 de 2024.
+
+La vigencia 2024 del PRONE fue contundente: ningún proyecto cumplió los requisitos del MME \parencite{MME2025}. No porque las ideas fueran malas, sino porque estructurar un proyecto que integre normalización y AGPE dentro del marco normativo vigente exige herramientas que hoy no existen. Los OR saben qué pueden financiar. No tienen claro cómo estructurarlo para que sea elegible, técnicamente sólido, financieramente viable y socialmente aceptado al mismo tiempo. Esta monografía propone esa herramienta.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Objetivos}
+\label{sec:objetivos}
+% ─────────────────────────────────────────────────────────────
+
+\subsection*{Objetivo General}
+
+Desarrollar una metodología integral para la normalización de redes eléctricas en barrios subnormales, que incluya la incorporación de sistemas de Autogeneración a Pequeña Escala, en concordancia con las disposiciones del Programa de Normalización de Redes Eléctricas (PRONE).
+
+\subsection*{Objetivos Específicos}
+
+\begin{enumerate}[label=\alph*), leftmargin=1.8cm, itemsep=6pt]
+
+    \item Identificar la condición actual de los barrios subnormales en el marco de variables técnicas, sociales, económicas y legales, para comprender su situación y fundamentar futuras acciones.
+
+    \item Analizar el marco normativo vigente enfocado en los lineamientos del PRONE, la regulación de la CREG y su aplicación a la normalización de redes eléctricas en barrios subnormales y la Autogeneración a Pequeña Escala, con el fin de determinar su influencia y pertinencia.
+
+    \item Analizar técnica y financieramente la implementación de proyectos de normalización de redes eléctricas en barrios subnormales, incluyendo sistemas de Autogeneración a Pequeña Escala, a través de un caso de estudio de la literatura, para evaluar su viabilidad y replicabilidad.
+
+    \item Definir una hoja de ruta sobre los requisitos necesarios para obtener financiación en proyectos de normalización que incluyan sistemas de AGPE, mediante el marco del PRONE, para facilitar su gestión y ejecución.
+
+\end{enumerate}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Contribuciones del proyecto de grado}
+\label{sec:contribuciones}
+% ─────────────────────────────────────────────────────────────
+
+Esta monografía hace varias contribuciones concretas al campo de la ingeniería eléctrica aplicada a la prestación del servicio en comunidades vulnerables.
+
+La primera es un \textbf{diagnóstico integral y actualizado} de los BS en Colombia, con énfasis en la región Caribe. A diferencia de los estudios disponibles, este diagnóstico cruza fuentes estadísticas oficiales (SSPD, DANE, UPME) con los planes quinquenales de Air-e y Afinia y con los resultados de una consulta directa a expertos. El resultado es una caracterización que va más allá de los indicadores agregados e incorpora las dimensiones técnica, socioeconómica, legal y cultural que determinan si una intervención es sostenible.
+
+La segunda, y quizás la más original, es la \textbf{sistematización de la consulta a 20 profesionales} del sector eléctrico y del sector público con experiencia directa en proyectos de normalización. No existe en la literatura colombiana un levantamiento de este tipo con este nivel de detalle y representatividad sectorial. Los resultados revelaron que el principal obstáculo es la resistencia comunitaria al medidor, no las dificultades técnicas del diseño.
+
+La tercera es el \textbf{primer análisis documentado en Colombia} sobre la viabilidad de incorporar AGPE en proyectos de normalización en BS financiados con el PRONE, considerando las condiciones específicas de la región Caribe en cuanto a demanda real, recurso energético disponible y configuración de red.
+
+La cuarta y más directamente aplicable es la \textbf{metodología en cinco fases} que articula los componentes técnicos, normativos, financieros, sociales e institucionales del proceso, con actores, requisitos y entregables definidos para cada etapa. La vigencia 2024 del PRONE — ningún proyecto elegible — confirma que esta herramienta hace falta.
+
+Finalmente, a partir del análisis normativo y de los resultados de la consulta, se \textbf{identifican cuatro vacíos regulatorios} que hoy dificultan la implementación del componente AGPE dentro del PRONE, junto con recomendaciones concretas para resolverlos.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Estructura del documento}
+\label{sec:estructura}
+% ─────────────────────────────────────────────────────────────
+
+El documento está organizado en seis capítulos.
+
+El \textbf{Capítulo 1} — el presente — plantea el problema, revisa la literatura disponible, justifica el trabajo y define los objetivos.
+
+El \textbf{Capítulo 2} caracteriza los BS con énfasis en la región Caribe: condiciones legales, socioeconómicas, técnicas y culturales. Incorpora los resultados de la consulta a expertos como insumo diferenciador del diagnóstico.
+
+El \textbf{Capítulo 3} desarrolla el marco normativo que regula la normalización de redes y los sistemas AGPE en Colombia, con la evolución histórica del PRONE y los tres casos de estudio más documentados del país.
+
+El \textbf{Capítulo 4} realiza el análisis técnico y financiero de un caso de estudio construido a partir de las condiciones de la región Caribe, comparando los escenarios con y sin AGPE.
+
+El \textbf{Capítulo 5} presenta la metodología integral: la hoja de ruta en cinco fases para que los OR formulen y ejecuten proyectos elegibles ante el MME.
+
+El \textbf{Capítulo 6} cierra con las conclusiones principales, las recomendaciones de política y las líneas de investigación futura que este trabajo deja abiertas.

@@ -1,0 +1,468 @@
+% ============================================================
+%  capitulo4_tecnico.tex
+%  Capítulo 4: Análisis Técnico y Financiero de la
+%              Implementación de AGPE en Normalización
+% ============================================================
+
+\chapter{Análisis Técnico y Financiero de la Implementación de AGPE en Normalización}
+\label{chap:tecnico}
+
+% Paquete necesario para las notas en rojo — agregar en main.tex:
+% \usepackage{color}
+% \newcommand{\notasoley}[1]{\textcolor{red}{\textbf{[NOTA PARA SOLEY: }#1\textbf{]}}}
+
+Este capítulo tiene dos partes. La primera revisa el comportamiento
+histórico de la normalización en Colombia desde la perspectiva
+financiera, cruzando los datos de inversión privada de Air-e y Afinia
+con el registro de proyectos del PRONE entre 2005 y 2025. La segunda
+desarrolla el caso de estudio hipotético que evalúa la viabilidad
+técnica y financiera de integrar sistemas AGPE en un proyecto de
+normalización bajo las condiciones reales de la región Caribe.
+
+Los parámetros de demanda y las condiciones climáticas y
+socioeconómicas del caso de estudio vienen del
+Capítulo~\ref{chap:diagnostico}. El marco normativo de referencia
+está en el Capítulo~\ref{chap:normativo}.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Normalización a Través de los Años con Recursos Públicos y Privados}
+\label{sec:historico}
+% ─────────────────────────────────────────────────────────────
+
+La literatura sobre normalización en Colombia documenta poco lo que
+pasa en campo. No hay muchos estudios que registren un proyecto desde
+la pre-factibilidad hasta la operación con datos suficientes para
+analizarlo. Lo que sí hay son los casos del Capítulo~\ref{chap:normativo},
+las actas CAPRONE del MME y los informes quinquenales de Air-e y Afinia
+para los años 2021--2024. Con eso se construyó este análisis.
+
+\subsection{Comportamiento de la normalización con recursos privados}
+\label{subsec:rec_privados}
+
+Los dos casos con inversión privada documentada son los de Santander
+(2010--2014) y Cauca (2014--2018), analizados en el
+Capítulo~\ref{chap:normativo}. Fuera de esos, hay dos estudios con
+datos cuantitativos relevantes.
+
+\textcite{CabralesSanjuan2015} estimaron un costo promedio de
+\textbf{\$1.093.052 por usuario} en proyectos de normalización urbana
+en CENS, orientados principalmente a la sustitución de medidores y
+acometidas obsoletas. Es la referencia numérica más citada en la
+literatura para proyectos de este tipo. \textcite{PenaMantilla2020},
+por su parte, analizaron alternativas de mitigación de pérdidas en EPM
+para el municipio de Itagüí y encontraron que legalizar y controlar
+usuarios es más rentable que normalizar completamente la infraestructura,
+aunque advierten que sin revisiones y controles posteriores los usuarios
+normalizados tienden a reincidir en las conexiones ilegales.
+
+Al revisar los planes quinquenales de Air-e y Afinia, lo que se ve es
+una priorización constante de los niveles de tensión 2, 3 y 4. El nivel
+1 —que es donde está la infraestructura de los BS— queda relegado.
+
+\subsubsection{Air-e: comportamiento de la inversión 2021--2024}
+\label{subsubsec:aire_inversion}
+
+La inversión de Air-e en nivel de tensión 1 fue inferior al 30\% durante
+2021--2023: 13\% en 2021, 24\% en 2022 y 27\% en 2023. En 2024 subió al
+50\%, pero se destinó a modernizar líneas y circuitos, no a normalizar
+BS. Los informes no identifican ninguna partida específica para usuarios
+subnormales \parencite{Aire2021, Aire2022, Aire2023, Aire2024}.
+
+Más preocupante aún: la ejecución del plan de inversiones aprobado por
+la CREG fue del 25\% en 2023 y del 19\% en 2024. El OR justificó esos
+incumplimientos en dificultades operativas y problemas de liquidez. La
+conclusión es directa: si Air-e no puede ejecutar ni su propio plan de
+inversiones, su capacidad de cofinanciar proyectos de normalización con
+recursos propios es prácticamente nula. El PRONE no es un complemento
+conveniente para ese OR — es la única vía realista.
+
+\subsubsection{Afinia: estrategias de control de pérdidas 2021--2024}
+\label{subsubsec:afinia_perdidas}
+
+Afinia no detalla en sus informes la inversión por nivel de tensión, pero
+sí muestra un esfuerzo sostenido en reducción y control de pérdidas
+mediante acciones técnicas y comerciales: normalización de medida en
+suministros con altas pérdidas, medición prepago, adecuación de redes
+internas y talleres de gestión social para mejorar el recaudo
+\parencite{Afinia2021, Afinia2022, Afinia2023, Afinia2024}.
+
+La Tabla~\ref{tab:afinia_acciones} muestra las acciones ejecutadas entre
+2021 y 2024. Las pérdidas bajaron de 27,69\% en 2021 a 26,15\% en 2022,
+pero volvieron a subir en 2023 (26,73\%) y 2024 (27,95\%). El OR
+atribuye el rebote al aumento del hurto de energía por la inconformidad
+de los usuarios con el alza del Costo Unitario (CU) por encima de
+\$1.000/kWh, y al mayor consumo generado por el Fenómeno de El Niño.
+
+\begin{table}[H]
+\centering
+\caption{Acciones realizadas por Afinia para el control y reducción de pérdidas (2021--2024)}
+\label{tab:afinia_acciones}
+\begin{tabularx}{\textwidth}{>{\RaggedRight}X
+                             >{\centering}p{2cm}
+                             >{\centering}p{2cm}
+                             >{\centering}p{2cm}
+                             >{\centering\arraybackslash}p{2cm}}
+\toprule
+\textbf{Acción} & \textbf{2021} & \textbf{2022} & \textbf{2023} & \textbf{2024} \\
+\midrule
+\rowcolor{grisclaro}
+Normalización de suministros sin medidor            & 16.841 & 10.580 & 13.260 & 8.487  \\
+Suministros con medición inteligente                & 13.738 & 26.723 & ---    & ---    \\
+\rowcolor{grisclaro}
+Instalación de macromedidores NT1                   & 281    & 740    & 2.739  & 10.851 \\
+Incorporación de nuevas invasiones (contratación)   & 86     & 34     & ---    & ---    \\
+\rowcolor{grisclaro}
+Incorporación de clientes conectados ilícitamente   & 6.145  & 36.866 & 35.118 & 36.774 \\
+Normalización de la medida                          & 1.719  & 6.250  & 14.131 & 19.461 \\
+\rowcolor{grisclaro}
+Instalación de equipos de medida prepago            & 255    & 270    & ---    & ---    \\
+\midrule
+\textbf{Total}  & \textbf{39.065} & \textbf{81.463} & \textbf{65.248} & \textbf{75.573} \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize\textit{Fuente: Elaboración propia
+con datos de \parencite{Afinia2021, Afinia2022, Afinia2023, Afinia2024}.}}
+\end{tabularx}
+\end{table}
+
+La instalación de macromedidores en NT1 pasó de 281 en 2021 a 10.851 en
+2024, y la normalización de la medida de 1.719 a 19.461. Hay aprendizaje
+y hay escala creciente. Pero el rebote en pérdidas de los últimos dos
+años muestra que las estrategias implementadas no son suficientes para
+sostener la tendencia. Las limitaciones operativas y financieras siguen
+presentes.
+
+\subsection{Comportamiento de la normalización con recursos públicos}
+\label{subsec:rec_publicos}
+
+La base de datos construida a partir de las actas CAPRONE del MME
+registra, por vigencia, el número de proyectos presentados por OR, el
+valor aprobado y los usuarios beneficiarios \parencite{MME2025}. El
+archivo complementario \textit{Proyectos adjudicados PRONE 2005--2025}
+contiene el detalle completo por municipio y departamento.
+
+Con esa información se construyó el análisis en Power BI que se presenta
+en las figuras siguientes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figura_prone_historico.png}
+\caption{Proyectos financiados con recursos públicos, vigencias 2003--2025}
+\label{fig:prone_historico}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{MME2025}.}
+\end{figure}
+
+La concentración geográfica es clara: región Caribe, región Pacífica y
+algunos departamentos andinos dominan el mapa. El 52,03\% de los
+proyectos entre 2005 y 2025 provienen de la Electrificadora de la Costa
+Caribe (hoy Afinia), seguida por Air-e (Figura~\ref{fig:prone_or}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\textwidth]{figura_prone_por_or.png}
+\caption{Proyectos presentados por Operador de Red, vigencias 2005--2025}
+\label{fig:prone_or}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{MME2025}.}
+\end{figure}
+
+Esa concentración no garantiza calidad en la formulación. En 2024,
+ningún proyecto de ningún OR cumplió los requisitos. El caso de CENS
+ilustra el problema desde otro ángulo: ese OR no ha participado en las
+convocatorias del MME porque las alcaldías de su área de cobertura no
+han ejecutado las certificaciones de BS requeridas
+\parencite{CabralesSanjuan2015}. La barrera no es técnica. Es
+institucional.
+
+\subsubsection{Variaciones anuales en proyectos y beneficiarios}
+
+La Figura~\ref{fig:prone_proyectos_usuarios} muestra el número de
+proyectos y usuarios beneficiados por vigencia.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\textwidth]{figura_prone_proyectos_usuarios.png}
+\caption{Proyectos presentados y usuarios beneficiados, vigencias 2005--2025}
+\label{fig:prone_proyectos_usuarios}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{MME2025}.}
+\end{figure}
+
+Los periodos más relevantes:
+
+\textbf{2007--2010}: Sin proyectos aprobados. El ajuste normativo tras
+la Ley 1117 de 2006 y el Decreto 1123 de 2008 detuvo el programa
+mientras se redefinían condiciones, actores y procedimientos.
+
+\textbf{2012}: 185 proyectos, el pico histórico del programa. Resultado
+probable de años de acumulación de diagnósticos técnicos en los OR.
+
+\textbf{2016--2018}: De nuevo sin adjudicaciones. Coincide con el ajuste
+institucional del DUR 1073 de 2015.
+
+\textbf{2024}: Cero proyectos elegibles. Primera convocatoria sin
+ningún resultado. Ese dato confirma la brecha metodológica que justifica
+esta monografía \parencite{MME2025}.
+
+\textbf{2025}: 30 proyectos con el nuevo esquema AGPE, beneficiando
+cerca de 11.000 usuarios en La Guajira, Magdalena, Atlántico, Nariño,
+Huila y Meta.
+
+\subsubsection{Inversión histórica por vigencia}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figura_prone_inversion.png}
+\caption{Inversión por año en proyectos de normalización, vigencias 2005--2025}
+\label{fig:prone_inversion}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{MME2025}.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figura_prone_2025.png}
+\caption{Proyectos financiados en la vigencia 2025}
+\label{fig:prone_2025}
+\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{MME2025}.}
+\end{figure}
+
+La vigencia 2025 es la más atípica del periodo analizado: con solo 30
+proyectos —menos de una quinta parte del pico de 2012— el valor de
+financiación solicitado es comparable al de vigencias con muchos más
+proyectos. Eso es directamente atribuible al componente AGPE: cada
+sistema fotovoltaico representa un costo adicional que eleva de manera
+sustancial el costo por usuario respecto a la normalización convencional.
+
+En total, entre 2003 y 2025 el PRONE reporta cerca de \textbf{290.000
+usuarios beneficiados} según proyectos aprobados. Esa cifra puede
+diferir del número real ejecutado por los ajustes que ocurren durante
+la obra.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Análisis Técnico del Caso de Estudio}
+\label{sec:caso_tecnico}
+% ─────────────────────────────────────────────────────────────
+
+Esta sección construye un caso de estudio hipotético basado en las
+condiciones reales de la región Caribe para evaluar la viabilidad de
+integrar AGPE en un proyecto de normalización. Los parámetros de
+demanda vienen del Capítulo~\ref{chap:diagnostico} y la normativa de
+referencia del Capítulo~\ref{chap:normativo}. El análisis compara los
+escenarios con y sin AGPE.
+
+\subsection{Descripción del caso de estudio}
+\label{subsec:descripcion_caso}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Acá empieza tu parte técnica del documento. Esta sección es el corazón de tu monografía y la que tienes que desarrollar tú. Necesitas definir el barrio que vas a usar como caso de estudio. No tiene que ser un barrio real con nombre y dirección — puede ser uno hipotético construido a partir de las condiciones de la región Caribe que ya documentamos en el Capítulo 2. Lo que sí debes definir con claridad es:
+
+\begin{itemize}
+    \item Municipio o tipo de municipio (ej.: clima cálido húmedo, Costa Caribe, atendido por Air-e o Afinia)
+    \item Número de viviendas o usuarios a normalizar — tú eliges el número, algo entre 50 y 200 usuarios es razonable para un proyecto PRONE
+    \item Piso térmico y temperatura promedio del sitio
+    \item Consumo promedio por usuario — usa los 235 kWh/mes que calculamos en el Capítulo 2 para clima cálido húmedo, o 218 kWh/mes para cálido seco. Estos son tus datos reales, NO uses los estándares del PIEC porque quedarías subdimensionando el sistema
+    \item Descripción del estado actual de la red (la subnormalidad del barrio)
+    \item Estrato socioeconómico — estrato 1 para todo el barrio
+    \item Si el barrio cuenta con certificación de BS vigente
+\end{itemize}
+
+Extensión aproximada: 1 página de texto más una figura de localización o un esquema del barrio si la tienes.}
+
+\subsection{Lineamientos técnicos para la integración de sistemas AGPE}
+\label{subsec:lineamientos_agpe}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí defines los criterios técnicos generales bajo los cuales vas a diseñar e integrar el sistema AGPE. No son cálculos todavía — son las decisiones de diseño que justificas antes de calcular. Necesitas explicar:
+
+\begin{enumerate}
+    \item Qué fuente renovable seleccionas y por qué (la respuesta obvia es fotovoltaica — la región Caribe tiene entre 4,5 y 6,0 kWh/m²/día de irradiación, La Guajira es la zona con mayor recurso del país)
+    \item Cómo vas a configurar el sistema: centralizado para todo el barrio o distribuido? Con baterías o solo inyección a la red? Con o sin seguidor solar? Justifica con base en la norma CREG 174/2021, que limita la inyección al 50\% de la capacidad del transformador o circuito
+    \item Las restricciones normativas que aplican: potencia máxima del AGPE 1 MW (Resolución UPME 281/2015), límite del 50\% de inyección (CREG 174/2021), medición bidireccional obligatoria, y definición de quién es dueño de los activos — el OR o la Comunidad Energética según el Decreto 2236/2023
+\end{enumerate}
+
+Extensión aproximada: 1 a 1,5 páginas.}
+
+\subsection{Disponibilidad del recurso solar en la región Caribe}
+\label{subsec:recurso_solar}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí presentas los datos de irradiación solar del sitio que elegiste. Esto no requiere mediciones propias — hay herramientas gratuitas que te dan los datos en 10 minutos:
+
+\begin{itemize}
+    \item \textbf{Global Solar Atlas} (globalsolaratlas.info) — la más visual y fácil. Buscas el municipio y te da directamente la irradiación y las horas pico solar (HPS).
+    \item \textbf{NASA POWER} (power.larc.nasa.gov) — gratis, da datos mensuales por coordenadas, muy citado académicamente.
+    \item \textbf{Atlas de Radiación Solar de Colombia} del IDEAM — fuente oficial colombiana.
+\end{itemize}
+
+Con esa información construyes: una tabla con la irradiación promedio mensual (kWh/m²/día) para los 12 meses del año, el promedio anual, el factor de desempeño (PR) típico para sistemas en clima cálido húmedo — generalmente entre 0,75 y 0,80 — y las HPS del sitio.
+
+Extensión aproximada: 1 página más una tabla y una figura.}
+
+\subsection{Capacidades de conexión: circuitos y transformadores}
+\label{subsec:capacidad_conexion}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Antes de dimensionar el AGPE necesitas verificar que la red puede absorberlo. Este es el paso que muchos proyectos omiten y por eso les va mal en la evaluación del MME. Los cálculos que necesitas hacer son:
+
+\begin{enumerate}
+    \item \textbf{Carga total del barrio normalizado} = número de usuarios × potencia instalada promedio por vivienda × factor de demanda simultánea. Para BS en clima cálido con ventilador y nevera básica, la potencia instalada por vivienda es entre 1,5 y 2,0 kW. El factor de demanda simultánea para estrato 1 en clima cálido es aproximadamente 0,5.
+    \item \textbf{Transformador de distribución}: escoge el que cubra la demanda máxima con un margen del 20\% de reserva. Anota la capacidad en kVA y el nivel de tensión (por ejemplo 13,2 kV / 220 V).
+    \item \textbf{Límite del AGPE según CREG 174/2021} = 50\% de la capacidad del transformador en kVA. Ese es el techo de tu sistema solar.
+    \item Verifica que la potencia del AGPE que vayas a dimensionar en la siguiente sección no supere ese límite.
+\end{enumerate}
+
+Presenta los resultados en una tabla resumen. Extensión aproximada: 1 página más una tabla.}
+
+\subsection{Diseño eléctrico de la normalización de redes}
+\label{subsec:disenio_electrico}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta es la parte más técnica del capítulo. Aquí describes el diseño completo de la red eléctrica que vas a normalizar — no el AGPE todavía, eso va en la sección siguiente. Ya tenías esto escrito en tu versión anterior con los ``xxx KVA'' y ``municipio xxx''. Ahora que tienes el caso de estudio definido, reemplaza esos valores con los números reales de tus cálculos. El diseño debe incluir: red MT (longitud, configuración, calibre del conductor, caída de tensión calculada), transformador de distribución (capacidad en kVA, relación de transformación, tipo), red BT (longitud total, calibre del conductor — se recomienda concéntrico antifraude igual que en Santander —, número de acometidas), sistema de medición (tipo de medidor y justificación), sistema de puesta a tierra, protecciones coordinadas y diagrama unifilar. Todo conforme al RETIE vigente.}
+
+El diseño eléctrico del proyecto se desarrolla conforme a la Resolución
+MME 40117 de 2024 que modificó el RETIE. La normatividad técnica de
+referencia es:
+
+\begin{itemize}
+    \item RETIE -- Resolución MME 40117 de 2024.
+    \item RETILAP.
+    \item Normas ICONTEC.
+    \item Código Eléctrico Colombiano (NTC 2050).
+    \item Normas y especificaciones del OR correspondiente.
+    \item Especificaciones de fabricantes de equipos y materiales.
+\end{itemize}
+
+Los ítems del diseño, conforme al RETIE, son:
+
+\begin{enumerate}[label=\alph*), leftmargin=1.8cm, itemsep=3pt]
+    \item Análisis de riesgos de origen eléctrico y medidas de mitigación.
+    \item Análisis de riesgos por descargas atmosféricas y medidas de protección.
+    \item Análisis y cálculo de cargas iniciales y futuras, incluyendo factor de potencia y armónicos.
+    \item Coordinación de aislamiento eléctrico.
+    \item Análisis y cálculo de cortocircuito, arco eléctrico y falla a tierra.
+    \item Análisis del nivel de tensión requerido.
+    \item Cálculos de campos electromagnéticos.
+    \item Cálculo de transformadores incluyendo efectos de armónicos y factor de potencia.
+    \item Sistema de puesta a tierra.
+    \item Cálculo económico de conductores teniendo en cuenta factores de pérdidas y costos de la energía.
+    \item Especificación de conductores conforme a IEC 60909 u equivalente.
+    \item Cálculo mecánico de estructuras y elementos de sujeción de redes.
+    \item Cálculo y coordinación de protecciones contra sobrecorrientes conforme a IEC 60947-2 Anexo A.
+    \item Cálculos de canalizaciones, bandejas portacables y volumen de encerramientos.
+    \item Cálculo de pérdidas de energía incluyendo efectos de armónicos y factor de potencia.
+    \item Cálculos de regulación de tensión.
+    \item Identificación de áreas clasificadas como peligrosas.
+    \item Diagramas unifilares.
+    \item Planos eléctricos para construcción.
+    \item Especificaciones técnicas de equipos y materiales.
+    \item Distancias de seguridad o servidumbre requeridas.
+    \item Justificación de desviaciones técnicas cuando sea necesario.
+    \item Selección, cálculo y especificación de equipos de generación convencionales y no convencionales.
+\end{enumerate}
+
+\subsection{Dimensionamiento del sistema AGPE}
+\label{subsec:dimensionamiento_agpe}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Este es el cálculo central del capítulo — el que más peso tiene en la evaluación técnica. Con los datos del recurso solar (sección anterior) y el límite del 50\% del transformador (sección anterior), aquí dimensionas el sistema fotovoltaico paso a paso:
+
+\begin{enumerate}
+    \item \textbf{Potencia pico del sistema (kWp)}: no puede superar el 50\% del transformador. Calcula cuánto consumo del barrio cubre ese sistema dado el recurso solar disponible.
+    \item \textbf{Energía generada por mes}: $E_{gen} = P_{pico}\ [kWp] \times HPS\ [h/d\acute{i}a] \times PR \times 30\ [d\acute{i}as]$. Usa PR = 0,75 para clima cálido húmedo.
+    \item \textbf{Porcentaje de cobertura}: $\% = E_{gen}\ /\ consumo\ total\ del\ barrio \times 100$.
+    \item \textbf{Selección de paneles}: potencia unitaria del panel (ej. 550 Wp), número de paneles necesarios, área total requerida en m².
+    \item \textbf{Selección del inversor}: potencia en kW, tipo (string inverter o central).
+    \item \textbf{Almacenamiento}: si incluyes baterías, define capacidad en kWh, profundidad de descarga y autonomía. Si no incluyes, justifica por qué (costo, complejidad, disponibilidad de repuestos en la región).
+    \item \textbf{Medición bidireccional}: obligatoria por CREG 174/2021. Describe el punto de medida.
+\end{enumerate}
+
+Presenta los resultados en una tabla resumen de especificaciones técnicas. Extensión aproximada: 1,5 páginas más la tabla.}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Análisis Financiero del Caso de Estudio}
+\label{sec:analisis_financiero}
+% ─────────────────────────────────────────────────────────────
+
+\subsection{Costo unitario por usuario y comparación de escenarios}
+\label{subsec:costo_usuario}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí comparas dos escenarios lado a lado:
+
+\textbf{Escenario A — Solo normalización de red (sin AGPE):} Suma todos los costos: red MT (\$/m × longitud), transformador de distribución, red BT (conductores + postes + herrajes), medidores individuales (N° usuarios × \$/medidor), acometidas (N° usuarios × \$/acometida), puesta a tierra, ingeniería y dirección técnica (~8-10\% del total), gestión social (~5\% del total). Calcula el TOTAL y el COSTO POR USUARIO. La referencia de CENS de 2015 era \$1.093.052 por usuario — actualiza ese valor por inflación o usa los precios actuales del OR si los consigues.
+
+\textbf{Escenario B — Red más AGPE:} Todo lo anterior más paneles fotovoltaicos (N° paneles × \$/panel), inversor(es), estructura de montaje, medición bidireccional y cableado del sistema AGPE. Calcula el TOTAL, el COSTO ADICIONAL DEL AGPE (B menos A) y el COSTO POR USUARIO del escenario B.
+
+Presenta una tabla comparativa con los dos escenarios lado a lado. Extensión aproximada: 1,5 páginas más la tabla.}
+
+\subsection{Análisis del impacto en la factura del usuario}
+\label{subsec:impacto_factura}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta es la sección que conecta directamente con lo que encontramos en la encuesta: el miedo al incremento de la factura es el principal obstáculo para la normalización. Aquí demuestras con números que el AGPE puede moderar ese impacto. La tabla que necesitas tiene tres columnas:
+
+\begin{enumerate}
+    \item Factura mensual ANTES de la normalización (con el esquema comunitario actual, si tienes datos; si no, usa el valor de la cuota comunitaria promedio que mencionaron los expertos: entre \$40.000 y \$50.000)
+    \item Factura mensual CON normalización SIN AGPE: consumo del usuario × CU − subsidio FOES
+    \item Factura mensual CON normalización CON AGPE: (consumo del usuario − energía del AGPE por usuario) × CU − subsidio FOES
+\end{enumerate}
+
+Calcula la diferencia entre los escenarios 2 y 3 y responde: ¿el AGPE hace la transición económicamente más manejable para las familias? Esa conclusión es clave para la metodología del Capítulo 5.}
+
+\subsection{Evaluación de la viabilidad financiera}
+\label{subsec:viabilidad}
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Con los costos y ahorros de las secciones anteriores, calcula los tres indicadores financieros clásicos:
+
+\begin{enumerate}
+    \item \textbf{Período de recuperación simple (PRS)}: inversión total / ahorro anual total. Expresa el resultado en años.
+    \item \textbf{Valor Presente Neto (VPN)} a 20 años con una tasa de descuento del 10\% (o la tasa del MME si la consigues). Si el VPN es positivo, el proyecto genera valor.
+    \item \textbf{Tasa Interna de Retorno (TIR)}: la tasa a la que el VPN es cero. Compara con la tasa del 10\% para determinar si el proyecto es financieramente viable.
+\end{enumerate}
+
+Una tabla con los indicadores de los dos escenarios lado a lado es suficiente. Extensión aproximada: 1 página más la tabla.}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Viabilidad y Replicabilidad de los Sistemas AGPE en Proyectos de Normalización}
+\label{sec:viabilidad_replicabilidad}
+% ─────────────────────────────────────────────────────────────
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Con los resultados del análisis técnico y financiero, aquí respondes la pregunta: ¿bajo qué condiciones este tipo de proyecto es viable y puede replicarse en otros BS? Cubre cuatro aspectos:
+
+\begin{enumerate}
+    \item \textbf{Condiciones técnicas de viabilidad}: recurso solar mínimo requerido (HPS mínimas), tamaño mínimo del barrio en número de usuarios para que el costo por usuario sea razonable, capacidad mínima del transformador que permite integrar el AGPE dentro del límite del 50\%.
+    \item \textbf{Condiciones financieras}: rango de costo unitario por usuario compatible con la adjudicación del PRONE, nivel mínimo de recaudo post-normalización que garantiza la sostenibilidad del OR.
+    \item \textbf{Condiciones sociales}: nivel mínimo de apropiación comunitaria — aquí conecta con los hallazgos de la encuesta —, y qué modelo de propiedad del AGPE genera más sostenibilidad: ¿OR o Comunidad Energética?
+    \item \textbf{Limitaciones y riesgos reales}: ¿qué pasa si los usuarios manipulan o venden los paneles? ¿Hay técnicos locales para el mantenimiento en la región Caribe? ¿La salinidad y la humedad del ambiente costero afectan la vida útil de los paneles? ¿Qué pasa con los excedentes cuando el AGPE genera más de lo que consume el barrio en horas de sol?
+\end{enumerate}
+
+Extensión aproximada: 1,5 páginas.}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Ventajas y Desventajas de la Incorporación de AGPE en la Normalización}
+\label{sec:ventajas_desventajas}
+% ─────────────────────────────────────────────────────────────
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta sección sintetiza los hallazgos del capítulo en un análisis estructurado de pros y contras desde tres perspectivas. Puedes hacerlo como texto o como tabla — yo te recomiendo la tabla porque queda más clara visualmente. Las tres perspectivas son:
+
+\textbf{Técnica} — Ventajas: reduce consumo neto de la red (menos carga en el transformador y los conductores de BT), puede mejorar la calidad de tensión en horas de mayor irradiación, diversifica la fuente de energía. Desventajas: la generación solar varía (de noche no hay y en días nublados baja), requiere medición bidireccional adicional, el mantenimiento de paneles e inversores puede ser difícil en BS alejados.
+
+\textbf{Social} — Ventajas: reduce el impacto en la factura y por tanto la resistencia comunitaria, el panel en el techo es visible y tangible (la red normalizada no se ve), puede crear sentido de apropiación si los activos se ceden a la Comunidad Energética. Desventajas: mayor complejidad en la socialización del proyecto, riesgo de que los usuarios manipulen o vendan los paneles, la figura de Comunidad Energética requiere capacidades administrativas que pueden no existir en la comunidad.
+
+\textbf{Económica} — Ventajas: reduce la factura del usuario y mejora la sostenibilidad del recaudo a largo plazo, reduce el Costo Unitario del OR en el área normalizada al bajar las pérdidas técnicas, los paneles tienen vida útil de 25 años. Desventajas: costo inicial significativamente mayor que la normalización sin AGPE, mayor presión sobre los recursos del PRONE, el período de recuperación de la inversión es más largo.
+
+Extensión aproximada: 1 a 1,5 páginas o una tabla de 3 filas por 2 columnas.}
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Síntesis del Capítulo}
+\label{sec:sintesis_cap4}
+% ─────────────────────────────────────────────────────────────
+
+\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Una vez que completes las secciones anteriores, escribe aquí 3 a 4 párrafos resumiendo los hallazgos principales del capítulo. El texto debe responder directamente al Objetivo Específico 3: ``Analizar técnica y financieramente la implementación de proyectos de normalización de redes eléctricas en barrios subnormales, incluyendo sistemas de AGPE, a través de un caso de estudio de la literatura, para evaluar su viabilidad y replicabilidad.''
+
+El último párrafo debe conectar con la metodología del Capítulo 5: algo como ``Los resultados de este análisis muestran que [hallazgo clave], lo que se traduce en los siguientes criterios que orientan la metodología del Capítulo 5...'' Ese cierre es importante porque hace explícito cómo los capítulos se articulan entre sí.}
+
+El análisis histórico del PRONE entre 2005 y 2025 deja un panorama
+claro: en veinte años de operación el programa ha beneficiado a cerca
+de 290.000 usuarios, pero la demanda de normalización crece a un ritmo
+del 26\% en cuatro años y los OR con mayor exposición a la subnormalidad
+no tienen capacidad financiera para cofinanciar proyectos a escala. El
+PRONE es la vía prácticamente exclusiva para financiar la normalización
+en la región Caribe. El resultado de 2024 —ningún proyecto elegible—
+confirma que la brecha no es de recursos sino de capacidad metodológica
+para estructurar proyectos que cumplan los requisitos del MME.
