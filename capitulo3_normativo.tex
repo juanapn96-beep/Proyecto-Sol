@@ -89,17 +89,17 @@ Entre 2014 y 2018 la normativa reglamentaria fue tomando forma. La \textbf{Resol
 La \textbf{Resolución CREG 174 de 2021} derogó completamente la 030 de 2018 y es hoy la referencia regulatoria para los sistemas AGPE en el SIN \parencite{ResolucionCREG174_2021}. Tres cambios son particularmente relevantes para proyectos en BS:
 
 \begin{itemize}
-    \item \textbf{El límite de inyección subió del 15\% al 50\%} de la capacidad del transformador o circuito al que se conecta el AGPE. Para los circuitos que sirven a los BS, que generalmente tienen capacidades nominales relativamente bajas, el umbral anterior del 15\% limitaba significativamente la potencia instalable del sistema AGPE sin requerir refuerzos en la red. Con el nuevo límite del 50\%, la potencia de generación que puede conectarse al mismo punto aumenta considerablemente, lo que mejora la viabilidad técnica y económica de estos proyectos al permitir sistemas de mayor tamaño sin inversiones adicionales en infraestructura de red.
+    \item \textbf{El límite de inyección subió del 15\% al 50\%} de la capacidad del transformador o circuito al que se conecta el AGPE. El umbral de penetración de generación distribuida define la máxima potencia que un sistema AGPE puede inyectar a un punto de la red sin comprometer la estabilidad del circuito ni requerir refuerzos adicionales en la infraestructura. Para los circuitos que sirven a los BS, que generalmente tienen capacidades nominales relativamente bajas, el umbral anterior del 15\% restringía de manera significativa el tamaño del sistema AGPE que podía instalarse: por ejemplo, en un transformador de 75~kVA, el límite pasó de 11,25~kW a 37,5~kW de potencia instalable. Con el nuevo límite del 50\%, la potencia de generación que puede conectarse al mismo punto aumenta considerablemente, lo que mejora la viabilidad técnica y económica de estos proyectos al permitir sistemas de mayor tamaño sin inversiones adicionales en infraestructura de red.
 
     \item \textbf{La información de conexión se hizo más accesible.} La resolución obligó a los OR a mantener un micrositio específico en su página web donde cualquier interesado puede consultar las características técnicas del punto de conexión y el estado de la red, sin software adicional. Eso reduce una barrera real para quien está formulando un proyecto.
 
-    \item \textbf{Se definió el manejo de excedentes vía tarifa}, distinguiendo el caso en que los excedentes inyectados a la red superan la energía importada desde ella (denominado permuta: el AGPE entrega más energía de la que toma, y el OR compensa al usuario a una tarifa definida por la CREG) del caso en que los excedentes son menores o iguales a las importaciones (el excedente se descuenta directamente de la factura). Esa distinción alinea la regulación con la realidad técnica de la medición bidireccional y define cómo se liquida el intercambio de energía entre el usuario y el OR.
+    \item \textbf{Se definió el manejo de excedentes vía tarifa}, estableciendo dos escenarios. En el primero, cuando la energía que el AGPE inyecta a la red es menor o igual a la que importa desde ella, los excedentes se descuentan directamente de la factura del usuario como un crédito energético. En el segundo, denominado permuta, cuando los excedentes superan las importaciones —es decir, el AGPE entrega más energía de la que toma— el OR compensa al usuario por ese excedente neto a una tarifa definida por la CREG. Esa distinción alinea la regulación con la realidad técnica de la medición bidireccional y define con claridad cómo se liquida el intercambio de energía entre el usuario y el OR.
 \end{itemize}
 
 \subsection{La integración del AGPE en la normalización (2023--2025)}
 \label{subsec:integracion_agpe_normalizacion}
 
-El Decreto 1023 de 2024 es la pieza normativa que hace posible lo que propone esta monografía. Integra el AGPE dentro del PRONE y crea la distinción de propiedad que ya se mencionó: la red normalizada queda bajo el OR para efectos de AOM; los activos de generación pueden transferirse a la Comunidad Energética. Esa distinción tiene consecuencias sobre quién responde por qué en el largo plazo, y requiere que el proyecto la defina con claridad desde el inicio \parencite{Decreto1023_2024}.
+Como se señaló en la Sección~\ref{subsec:agpe_prone}, el Decreto 1023 de 2024 es la pieza normativa que hace posible lo que propone esta monografía. Integra el AGPE dentro del PRONE y crea la distinción de propiedad que ya se mencionó: la red normalizada queda bajo el OR para efectos de AOM; los activos de generación pueden transferirse a la Comunidad Energética. Esa distinción tiene consecuencias sobre quién responde por qué en el largo plazo, y requiere que el proyecto la defina con claridad desde el inicio \parencite{Decreto1023_2024}.
 
 El costo unitario por usuario en proyectos con AGPE es notablemente superior al de proyectos convencionales. Los 30 proyectos de la vigencia 2025 lo ilustran: requirieron un valor de financiación significativamente mayor al de vigencias anteriores con muchos más proyectos \parencite{MME2025}. Esa presión sobre los recursos disponibles del PRONE refuerza la necesidad de criterios de priorización más específicos para proyectos con AGPE, uno de los vacíos regulatorios que se aborda en el Capítulo~\ref{chap:metodologia}.
 
@@ -109,7 +109,7 @@ El costo unitario por usuario en proyectos con AGPE es notablemente superior al 
 \label{sec:casos_estudio}
 % ─────────────────────────────────────────────────────────────
 
-Tres décadas de proyectos de normalización en Colombia dejan un registro valioso. Esta sección analiza los tres casos con mayor documentación disponible en la literatura, y, de manera complementaria, se analizó el comportamiento histórico de los proyectos del PRONE entre 2005 y 2025.
+Tres décadas de proyectos de normalización en Colombia dejan un registro valioso de qué funciona y qué no. Los tres casos con mayor documentación disponible en la literatura se analizaron por separado, y, de manera complementaria, se analizó el comportamiento histórico de los proyectos del PRONE entre 2005 y 2025.
 
 \subsection{Caso 1 -- Cartagena, Bolívar (1991)}
 \label{subsec:caso_cartagena}
@@ -125,7 +125,7 @@ El caso tiene varias limitaciones estructurales que, tres décadas después, sig
 
 La Electrificadora de Santander (ESSA) ejecutó entre 2010 y 2014 uno de los proyectos de normalización más completos ejecutados en el país, orientado a reducir pérdidas no técnicas que en 2009 representaban aproximadamente el 20\% de la energía transportada \parencite{MendezFuentes2013}.
 
-La inversión fue íntegramente con recursos propios del OR, distintos de los recursos públicos del Ministerio que provienen del presupuesto general de la nación: \$114.885 millones en total, de los cuales \$38.894 millones fueron inversión directa en infraestructura y \$75.991 millones costos operativos. La estrategia técnica combinó tres componentes:
+La inversión fue íntegramente con recursos propios del OR —distintos de los recursos públicos del MME, que provienen del presupuesto general de la nación—: \$114.885 millones en total, de los cuales \$38.894 millones fueron inversión directa en infraestructura y \$75.991 millones costos operativos. La estrategia técnica combinó tres componentes:
 
 \begin{enumerate}[label=\roman*), leftmargin=2cm, itemsep=4pt]
     \item \textbf{Red Chilena:} En lugar de red de baja tensión convencional, se instalaron transformadores pequeños de 5 a 15~kVA que alimentan directamente entre 6 y 9 usuarios a través de la acometida, desde una caja de derivación. Sin red de BT, no hay dónde conectarse ilegalmente.
@@ -148,37 +148,14 @@ La estrategia tuvo tres componentes. El técnico incluyó AMI y modernización c
 
 Los resultados hablan solos: recaudo del 0\% al 97\%, reducción del 67\% en el consumo por usuario (de 197 a 65~kWh-mes), mejora en calidad del servicio y condonación de 15 años de deudas acumuladas. Lo que no se puede ignorar es que articular todo eso requirió más de diez entidades — alcaldía, personería, defensoría, concejo, procuraduría, SSPD, secretarías, fuerza pública y medios de comunicación. Sin esa articulación, los asentamientos con mayor resistencia social no se hubieran podido intervenir \parencite{SerranoRueda2019}.
 
-\subsection{Comportamiento histórico del PRONE (2005--2025)}
-\label{subsec:prone_historico}
-
-A partir de las actas CAPRONE y los informes de evaluación del MME se construyó una base de datos de los proyectos adjudicados por vigencia, relacionándose los OR seleccionados, ubicación del proyecto, número de beneficiarios y valor solicitado \parencite{MME2025}. De esta se estableció que la concentración de proyectos financiados por el MME fueron presentados para la región Caribe, Pacífica y algunos departamentos de la andina. En cuanto a Orinoquía y Amazonía la participación fue marginal, lo cual es coherente con la existencia de BS documentados en esa zona.
-
-El 52,03\% de los proyectos presentados entre 2005 y 2025 provienen de la Electrificadora de la Costa Caribe (hoy Afinia y Air-e); en 2024, ningún proyecto de esos OR —ni de ningún otro— resultó elegible.
-
-Entre las variaciones anuales se destacan las siguientes:
-
-\begin{itemize}
-    \item \textbf{2007--2010}: Sin proyectos aprobados. El ajuste normativo tras la Ley 1117 de 2006 y el Decreto 1123 de 2008 redefinió actores, condiciones y procedimientos, y el programa estuvo prácticamente detenido.
-
-    \item \textbf{2012}: 185 proyectos, el pico histórico del programa. Probablemente el resultado de años de acumulación de diagnósticos técnicos en los OR.
-
-    \item \textbf{2016--2018}: De nuevo sin proyectos. El DUR 1073 de 2015 generó otro periodo de ajuste institucional.
-
-    \item \textbf{2024}: Cero proyectos elegibles. El primer año con convocatoria bajo el nuevo esquema AGPE y ninguno cumplió los requisitos.
-
-    \item \textbf{2025}: 30 proyectos con el esquema nuevo, beneficiando alrededor de 11.000 usuarios en La Guajira, Magdalena, Atlántico, Nariño, Huila y Meta. El valor de financiación solicitado fue significativamente mayor al de vigencias con mucho más proyectos, por el costo del componente solar.
-\end{itemize}
-
-En total, entre 2003 y 2025 el PRONE ha beneficiado aproximadamente a 290.000 usuarios según los proyectos aprobados. Esa cifra puede diferir de los beneficiarios reales por los ajustes que ocurren durante la ejecución.
-
 \begin{table}[H]
 \centering
 \caption{Casos de estudio de normalización en Colombia con recursos públicos y privados}
 \label{tab:casos_estudio}
 \begin{tabularx}{\textwidth}{>{\RaggedRight}p{2.5cm}
                              >{\RaggedRight}p{2.8cm}
-                             >{\RaggedRight}p{3.2cm}
-                             >{\RaggedRight\arraybackslash}p{4.3cm}}
+                             >{\RaggedRight}p{3.5cm}
+                             >{\RaggedRight\arraybackslash}p{4.0cm}}
 \toprule
 \textbf{Caso de Estudio} & \textbf{Financiación / Normatividad} & \textbf{Impacto en los Usuarios} & \textbf{Impacto en el OR} \\
 \midrule
@@ -202,6 +179,29 @@ En total, entre 2003 y 2025 el PRONE ha beneficiado aproximadamente a 290.000 us
 \multicolumn{4}{l}{\footnotesize\textit{Fuente: Elaboración propia con datos de \parencite{CastilloQuintana1991, MendezFuentes2013, SerranoRueda2019}.}}
 \end{tabularx}
 \end{table}
+
+\subsection{Comportamiento histórico del PRONE (2005--2025)}
+\label{subsec:prone_historico}
+
+A partir de las actas CAPRONE y los informes de evaluación del MME se construyó una base de datos de los proyectos adjudicados por vigencia, relacionándose los OR seleccionados, ubicación del proyecto, número de beneficiarios y valor solicitado \parencite{MME2025}. De esta se estableció que la concentración de proyectos financiados por el MME fueron presentados para la región Caribe, Pacífica y algunos departamentos de la andina. En cuanto a Orinoquía y Amazonía la participación fue marginal, lo cual es coherente con la existencia de BS documentados en esa zona.
+
+El 52,03\% de los proyectos presentados entre 2005 y 2025 provienen de la Electrificadora de la Costa Caribe (hoy Afinia y Air-e); en 2024, ningún proyecto de esos OR —ni de ningún otro— resultó elegible.
+
+Entre las variaciones anuales se destacan las siguientes:
+
+\begin{itemize}
+    \item \textbf{2007--2010}: Sin proyectos aprobados. El ajuste normativo tras la Ley 1117 de 2006 y el Decreto 1123 de 2008 redefinió actores, condiciones y procedimientos, y el programa estuvo prácticamente detenido.
+
+    \item \textbf{2012}: 185 proyectos, el pico histórico del programa. Probablemente el resultado de años de acumulación de diagnósticos técnicos en los OR.
+
+    \item \textbf{2016--2018}: De nuevo sin proyectos. El DUR 1073 de 2015 generó otro periodo de ajuste institucional.
+
+    \item \textbf{2024}: Cero proyectos elegibles. El primer año con convocatoria bajo el nuevo esquema AGPE y ninguno cumplió los requisitos.
+
+    \item \textbf{2025}: 30 proyectos con el esquema nuevo, beneficiando alrededor de 11.000 usuarios en La Guajira, Magdalena, Atlántico, Nariño, Huila y Meta. El valor de financiación solicitado fue significativamente mayor al de vigencias con mucho más proyectos, por el costo del componente solar.
+\end{itemize}
+
+En total, entre 2003 y 2025 el PRONE ha beneficiado aproximadamente a 290.000 usuarios según los proyectos aprobados. Esa cifra puede diferir de los beneficiarios reales por los ajustes que ocurren durante la ejecución.
 
 \subsection{Lo que enseñan los tres casos}
 \label{subsec:sintesis_casos}
