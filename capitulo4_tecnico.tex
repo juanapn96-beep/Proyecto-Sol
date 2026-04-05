@@ -7,10 +7,6 @@
 \chapter{Análisis Técnico y Financiero de la Implementación de AGPE en Normalización}
 \label{chap:tecnico}
 
-% Paquete necesario para las notas en rojo — agregar en main.tex:
-% \usepackage{color}
-% \newcommand{\notasoley}[1]{\textcolor{red}{\textbf{[NOTA PARA SOLEY: }#1\textbf{]}}}
-
 Este capítulo tiene dos partes. La primera revisa el comportamiento
 histórico de la normalización en Colombia desde la perspectiva
 financiera, cruzando los datos de inversión privada de Air-e y Afinia
@@ -249,69 +245,61 @@ demanda vienen del Capítulo~\ref{chap:diagnostico} y la normativa de
 referencia del Capítulo~\ref{chap:normativo}. El análisis compara los
 escenarios con y sin AGPE.
 
-\subsection{Descripción del caso de estudio}
-\label{subsec:descripcion_caso}
-
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Acá empieza tu parte técnica del documento. Esta sección es el corazón de tu monografía y la que tienes que desarrollar tú. Necesitas definir el barrio que vas a usar como caso de estudio. No tiene que ser un barrio real con nombre y dirección — puede ser uno hipotético construido a partir de las condiciones de la región Caribe que ya documentamos en el Capítulo 2. Lo que sí debes definir con claridad es:
-
-\begin{itemize}
-    \item Municipio o tipo de municipio (ej.: clima cálido húmedo, Costa Caribe, atendido por Air-e o Afinia)
-    \item Número de viviendas o usuarios a normalizar — tú eliges el número, algo entre 50 y 200 usuarios es razonable para un proyecto PRONE
-    \item Piso térmico y temperatura promedio del sitio
-    \item Consumo promedio por usuario — usa los 235 kWh/mes que calculamos en el Capítulo 2 para clima cálido húmedo, o 218 kWh/mes para cálido seco. Estos son tus datos reales, NO uses los estándares del PIEC porque quedarías subdimensionando el sistema
-    \item Descripción del estado actual de la red (la subnormalidad del barrio)
-    \item Estrato socioeconómico — estrato 1 para todo el barrio
-    \item Si el barrio cuenta con certificación de BS vigente
-\end{itemize}
-
-Extensión aproximada: 1 página de texto más una figura de localización o un esquema del barrio si la tienes.}
-
-\subsection{Lineamientos técnicos para la integración de sistemas AGPE}
+\subsection{Lineamientos técnicos y sociales para la integración de sistemas AGPE en proyectos de normalización}
 \label{subsec:lineamientos_agpe}
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí defines los criterios técnicos generales bajo los cuales vas a diseñar e integrar el sistema AGPE. No son cálculos todavía — son las decisiones de diseño que justificas antes de calcular. Necesitas explicar:
+La integración de estos dos sistemas eléctricos que garanticen un beneficio real y duradero para los usuarios necesita el cumplimiento de estándares técnicos y el fortalecimiento comunitario y social en pro de la apropiación y sentido de pertenencia sobre el proyecto. A continuación se definen los lineamientos mínimos para ello.
 
-\begin{enumerate}
-    \item Qué fuente renovable seleccionas y por qué (la respuesta obvia es fotovoltaica — la región Caribe tiene entre 4,5 y 6,0 kWh/m²/día de irradiación, La Guajira es la zona con mayor recurso del país)
-    \item Cómo vas a configurar el sistema: centralizado para todo el barrio o distribuido? Con baterías o solo inyección a la red? Con o sin seguidor solar? Justifica con base en la norma CREG 174/2021, que limita la inyección al 50\% de la capacidad del transformador o circuito
-    \item Las restricciones normativas que aplican: potencia máxima del AGPE 1 MW (Resolución UPME 281/2015), límite del 50\% de inyección (CREG 174/2021), medición bidireccional obligatoria, y definición de quién es dueño de los activos — el OR o la Comunidad Energética según el Decreto 2236/2023
-\end{enumerate}
+\subsubsection{Lineamientos Técnicos}
 
-Extensión aproximada: 1 a 1,5 páginas.}
+\textbf{Articulación normativa:} El Reglamento Técnico de Instalaciones Eléctricas (RETIE) establece las condiciones mínimas que una instalación eléctrica debe cumplir, entre ellas distancias de seguridad, selección de constructores y regulación de tensión, entre otros; y la Resolución CREG 174 de 2021 constituyen la normatividad que rige el diseño, dimensionamiento y la conexión del sistema AGPE a la red de distribución. Dentro de los requisitos principales para el dimensionamiento, la Resolución 174 limita la potencia máxima instalada de un sistema AGPE al 50\% de la capacidad del transformador o circuito de conexión \parencite{ResolucionCREG174_2021}.
 
-\subsection{Disponibilidad del recurso solar en la región Caribe}
-\label{subsec:recurso_solar}
+Adicionalmente, estipula que los excedentes que superen la importación se reconocerán a los usuarios a través de créditos de energía. Aunado a ello, establece los componentes de la tarifa que el usuario debe pagar según la capacidad del sistema AGPE ($<$ ó $>$ 100~kW): Comercialización, Distribución, Transmisión, Pérdidas Reconocidas y Restricciones. Así mismo, es pertinente recalcar que si bien ambos sistemas están integrados, el dimensionamiento de la red de distribución no está estrictamente ligado al del sistema AGPE, dado que si el sistema es de generación solar fotovoltaica su mayor producción se da en horas del día, mientras que la curva de carga muestra que el pico máximo de demanda se da en horas de la noche. En consecuencia, el diseño de la red de distribución sigue estando ligado principalmente a los picos de demanda \parencite{CREGCargoRespaldo2023, ResolucionCREG174_2021}.
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí presentas los datos de irradiación solar del sitio que elegiste. Esto no requiere mediciones propias — hay herramientas gratuitas que te dan los datos en 10 minutos:
+\textbf{Sistema de medición inteligente:} Debido a la naturaleza del proyecto y a la exigencia en las convocatorias del MME, se requieren medidores con tecnología AMI y bidireccionales, ya que permiten identificar los excedentes entregados a la red por el sistema AGPE con el fin de ser reconocidos a los usuarios.
+
+\textbf{Dimensionamiento del sistema de AGPE:} Con base en las dos resoluciones direccionadas al financiamiento de sistemas de normalización con AGPE, la capacidad instalada de los sistemas debe garantizar el consumo básico de subsistencia. Para ello, el cálculo de potencia debe ajustarse al factor de planta real del área de influencia.
+
+\subsubsection{Lineamientos Sociales}
 
 \begin{itemize}
-    \item \textbf{Global Solar Atlas} (globalsolaratlas.info) — la más visual y fácil. Buscas el municipio y te da directamente la irradiación y las horas pico solar (HPS).
-    \item \textbf{NASA POWER} (power.larc.nasa.gov) — gratis, da datos mensuales por coordenadas, muy citado académicamente.
-    \item \textbf{Atlas de Radiación Solar de Colombia} del IDEAM — fuente oficial colombiana.
+    \item \textbf{Conformación de Comunidades Energéticas:} A través del ``Plan de Acción Social'' formulado por el MME en las convocatorias de la vigencia 2025, la organización de los usuarios bajo la figura de Comunidades Energéticas es un requisito durante la ejecución de los proyectos. Si bien no se define el prestador de servicio público responsable del AOM del sistema de AGPE, este debe plantearse teniendo en cuenta que la gestión del sistema es colectiva y es importante el fortalecimiento y apropiación de los usuarios con respecto a la infraestructura eléctrica del proyecto.
+
+    \item \textbf{Formación y capacitación:} Conforme al Plan de Acción, este tipo de proyecto hace obligatoria la formación básica de los beneficiarios en AOM, en el uso racional y gestión eficiente de la energía. Esto engloba temas como la interpretación de los datos de un medidor y la cadena de valor. Los conocimientos adquiridos podrán romper las barreras sociales que afectan la ejecución de los proyectos de normalización en torno al aumento de la factura, mejorando los hábitos de consumo en los BS y garantizando la sostenibilidad del sistema de AGPE.
 \end{itemize}
 
-Con esa información construyes: una tabla con la irradiación promedio mensual (kWh/m²/día) para los 12 meses del año, el promedio anual, el factor de desempeño (PR) típico para sistemas en clima cálido húmedo — generalmente entre 0,75 y 0,80 — y las HPS del sitio.
 
-Extensión aproximada: 1 página más una tabla y una figura.}
+\subsection{Dimensionamiento técnico y económico de la normalización con AGPE}
+\label{subsec:dimensionamiento_caso}
 
-\subsection{Capacidades de conexión: circuitos y transformadores}
-\label{subsec:capacidad_conexion}
+El dimensionamiento de la red de distribución integrada y del sistema de autogeneración se realiza teniendo en cuenta, entre otras variables, la demanda energética, la capacidad de los equipos de generación fotovoltaica y la infraestructura mínima de una red en Media Tensión (MT) y Baja Tensión (BT) requerida para garantizar el cumplimiento de la normativa vigente.
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Antes de dimensionar el AGPE necesitas verificar que la red puede absorberlo. Este es el paso que muchos proyectos omiten y por eso les va mal en la evaluación del MME. Los cálculos que necesitas hacer son:
+Para la selección del área de influencia, se tomaron como referencia los proyectos presentados en las convocatorias del año 2025, dado que representan el único antecedente a la fecha de proyectos de normalización adjudicados con inclusión de sistemas AGPE. De los cuatro OR que presentaron proyectos y obtuvieron concepto FAVORABLE, Air-e fue el único con presencia en la región Caribe. Teniendo en cuenta que en el Capítulo~\ref{chap:diagnostico} se determinó que esta región es la zona donde más se presenta el fenómeno de subnormalidad y que el clima cálido húmedo eleva el consumo por necesidades de confort térmico, se seleccionó el proyecto en el BS ``El Espinal''.
 
-\begin{enumerate}
-    \item \textbf{Carga total del barrio normalizado} = número de usuarios × potencia instalada promedio por vivienda × factor de demanda simultánea. Para BS en clima cálido con ventilador y nevera básica, la potencia instalada por vivienda es entre 1,5 y 2,0 kW. El factor de demanda simultánea para estrato 1 en clima cálido es aproximadamente 0,5.
-    \item \textbf{Transformador de distribución}: escoge el que cubra la demanda máxima con un margen del 20\% de reserva. Anota la capacidad en kVA y el nivel de tensión (por ejemplo 13,2 kV / 220 V).
-    \item \textbf{Límite del AGPE según CREG 174/2021} = 50\% de la capacidad del transformador en kVA. Ese es el techo de tu sistema solar.
-    \item Verifica que la potencia del AGPE que vayas a dimensionar en la siguiente sección no supere ese límite.
-\end{enumerate}
+A continuación se describen los criterios de entrada:
 
-Presenta los resultados en una tabla resumen. Extensión aproximada: 1 página más una tabla.}
+\begin{itemize}
+    \item \textbf{Ubicación:} municipio Malambo, Atlántico
+    \item \textbf{Cantidad de usuarios:} 106
+    \item \textbf{Parámetros ambientales promedio:} T~27\,°C; HR~82\%; A~10~msnm
+    \item \textbf{Consumo promedio por usuario:} 235~kWh/mes
+    \item \textbf{Consumo básico de subsistencia:} 173~kWh/mes
+    \item \textbf{Estrato socioeconómico:} 1
+    \item \textbf{Certificación:} expedida por el ente territorial como BS
+    \item \textbf{Área disponible:} El polígono resaltado en rojo tiene un área de 77,72~ha, que para el caso de estudio corresponde al BS ``El Espinal''. Así mismo, la ubicación de las 106 viviendas está alrededor de la ruta marcada en amarillo, la cual tiene una longitud de 1,289~km (ver Figura~\ref{fig:delimitacion_bs}).
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+%\includegraphics[width=0.85\textwidth]{figura_delimitacion_bs.png}
+\caption{Delimitación geográfica del BS ``El Espinal''}
+\label{fig:delimitacion_bs}
+\footnotesize\textit{Fuente: Elaboración propia en Google Earth.}
+\end{figure}
+
 
 \subsection{Diseño eléctrico de la normalización de redes}
 \label{subsec:disenio_electrico}
-
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta es la parte más técnica del capítulo. Aquí describes el diseño completo de la red eléctrica que vas a normalizar — no el AGPE todavía, eso va en la sección siguiente. Ya tenías esto escrito en tu versión anterior con los ``xxx KVA'' y ``municipio xxx''. Ahora que tienes el caso de estudio definido, reemplaza esos valores con los números reales de tus cálculos. El diseño debe incluir: red MT (longitud, configuración, calibre del conductor, caída de tensión calculada), transformador de distribución (capacidad en kVA, relación de transformación, tipo), red BT (longitud total, calibre del conductor — se recomienda concéntrico antifraude igual que en Santander —, número de acometidas), sistema de medición (tipo de medidor y justificación), sistema de puesta a tierra, protecciones coordinadas y diagrama unifilar. Todo conforme al RETIE vigente.}
 
 El diseño eléctrico del proyecto se desarrolla conforme a la Resolución
 MME 40117 de 2024 que modificó el RETIE. La normatividad técnica de
@@ -354,108 +342,70 @@ Los ítems del diseño, conforme al RETIE, son:
     \item Selección, cálculo y especificación de equipos de generación convencionales y no convencionales.
 \end{enumerate}
 
-\subsection{Dimensionamiento del sistema AGPE}
+
+\subsection{Dimensionamiento eléctrico y económico del sistema de AGPE}
 \label{subsec:dimensionamiento_agpe}
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Este es el cálculo central del capítulo — el que más peso tiene en la evaluación técnica. Con los datos del recurso solar (sección anterior) y el límite del 50\% del transformador (sección anterior), aquí dimensionas el sistema fotovoltaico paso a paso:
+Considerando que el PRONE no especifica el tipo de generación a implementarse, sino por el contrario lo deja abierto a FNCER, fue necesario realizar un análisis de alternativas para identificar la tecnología adecuada para el caso de estudio, teniendo en cuenta el recurso energético disponible, los costos de inversión inicial, los costos fijos de operación y mantenimiento (O\&M) y la generación requerida. El proyecto debe suplir como mínimo el consumo básico de subsistencia (173~kWh/mes, según lo establecido en la Resolución 355 de 2004) de acuerdo con las Resoluciones 40243 y 40432 de 2025; por lo tanto, el sistema se dimensionará con respecto a este valor para los 106 usuarios \parencite{ResolucionCREG355_2004, ResolucionMME40243_2025, ResolucionMME40432_2025}.
 
-\begin{enumerate}
-    \item \textbf{Potencia pico del sistema (kWp)}: no puede superar el 50\% del transformador. Calcula cuánto consumo del barrio cubre ese sistema dado el recurso solar disponible.
-    \item \textbf{Energía generada por mes}: $E_{gen} = P_{pico}\ [kWp] \times HPS\ [h/d\acute{i}a] \times PR \times 30\ [d\acute{i}as]$. Usa PR = 0,75 para clima cálido húmedo.
-    \item \textbf{Porcentaje de cobertura}: $\% = E_{gen}\ /\ consumo\ total\ del\ barrio \times 100$.
-    \item \textbf{Selección de paneles}: potencia unitaria del panel (ej. 550 Wp), número de paneles necesarios, área total requerida en m².
-    \item \textbf{Selección del inversor}: potencia en kW, tipo (string inverter o central).
-    \item \textbf{Almacenamiento}: si incluyes baterías, define capacidad en kWh, profundidad de descarga y autonomía. Si no incluyes, justifica por qué (costo, complejidad, disponibilidad de repuestos en la región).
-    \item \textbf{Medición bidireccional}: obligatoria por CREG 174/2021. Describe el punto de medida.
-\end{enumerate}
+Al observar la tabla comparativa de las seis tecnologías dispuestas a pequeña escala (Tabla~\ref{tab:tecnologias_fnce}), se evidencia que en Colombia la tecnología con mayor despliegue es la solar fotovoltaica. Esta opción resulta ser la más económica en términos globales y la que requiere un menor porcentaje de inversión destinado a la instalación, alineado a que requieren un menor tiempo para su construcción, permitiendo que los proyectos se ejecuten con agilidad tal que puedan estar operativos en paralelo a la normalización de las redes eléctricas. Adicionalmente, presenta una ventaja competitiva ya que el costo de O\&M es mucho menor en comparación con las demás tecnologías \parencite{UPMECatalogoTecnologico2024}.
 
-Presenta los resultados en una tabla resumen de especificaciones técnicas. Extensión aproximada: 1,5 páginas más la tabla.}
+Al analizar las demás tecnologías según sus particularidades, se evidenció que las Pequeñas Centrales Hidroeléctricas (PCH) a filo de agua se ven seriamente afectadas por el fenómeno del Niño debido a la falta de almacenamiento de agua. Por tanto, la disminución del caudal de los ríos durante estos periodos reduciría la capacidad de autogeneración precisamente cuando más se necesita, ya que es en esos instantes cuando la tarifa de energía sube en todo el territorio nacional debido a que la matriz energética depende en más de un 70\% del recurso hídrico \parencite{XMGeneracionReal2025}. Por lo tanto, la autogeneración con PCH no estaría alineada con los picos de tarifa y no atacaría el problema central: la reducción de costos para los usuarios en condiciones de subsistencia durante los meses críticos \parencite{UPMECatalogoTecnologico2024}.
 
+En cuanto a la geotermia, la dinámica de financiación del PRONE exige que en el momento de la convocatoria el sistema ya cuente con un diseño definido. Esto implicaría que el OR debería asumir previamente los gastos de exploración, pruebas y estudios técnicos requeridos para garantizar el recurso. Como se observa en la caracterización técnica y económica, el costo de estos estudios iniciales es elevado, llegando a superar incluso la inversión total de un sistema solar completo, lo que vuelve inviable esta alternativa para un proyecto de normalización social, donde el OR busca financiamiento del Estado para solventar una problemática que afecta su cartera \parencite{UPMECatalogoTecnologico2024}.
 
-% ─────────────────────────────────────────────────────────────
-\section{Análisis Financiero del Caso de Estudio}
-\label{sec:analisis_financiero}
-% ─────────────────────────────────────────────────────────────
+De igual manera, la biomasa y el biogás dependen estrictamente de ciclos agrícolas, recolección de residuos y procesos de tratamiento o transporte de insumos. Al tratarse de un municipio con baja actividad económica agrícola, bovina y porcina, especialmente en el área de influencia, no se tendría garantizado el suministro constante de combustible, convirtiéndose en una carga logística y económica para los mismos usuarios \parencite{UPMECatalogoTecnologico2024}.
 
-\subsection{Costo unitario por usuario y comparación de escenarios}
-\label{subsec:costo_usuario}
+Finalmente, es importante considerar que todas estas tecnologías alternativas requieren un conocimiento técnico más complejo para su operación y mantenimiento. Dadas las capacidades educativas de los habitantes en estos barrios, un sistema difícil de operar generaría un cuello de botella que afectaría la infraestructura a mediano plazo, especialmente si el sistema queda a cargo de la comunidad bajo la figura de una Comunidad Energética. Por estas razones, la tecnología solar se consolida como la opción más viable, sostenible y de fácil apropiación para los usuarios, aunado a que el municipio de Malambo cuenta con una irradiancia solar en promedio entre 5,0 y 5,5~kWh/m\textsuperscript{2}/día, siendo de los mejores promedios en todo el territorio nacional \parencite{UPMECatalogoTecnologico2024}.
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Aquí comparas dos escenarios lado a lado:
+A continuación, en la Tabla~\ref{tab:tecnologias_fnce} se presenta cada una de las tecnologías disponibles en Colombia a pequeña escala y su caracterización técnica y económica.
 
-\textbf{Escenario A — Solo normalización de red (sin AGPE):} Suma todos los costos: red MT (\$/m × longitud), transformador de distribución, red BT (conductores + postes + herrajes), medidores individuales (N° usuarios × \$/medidor), acometidas (N° usuarios × \$/acometida), puesta a tierra, ingeniería y dirección técnica (~8-10\% del total), gestión social (~5\% del total). Calcula el TOTAL y el COSTO POR USUARIO. La referencia de CENS de 2015 era \$1.093.052 por usuario — actualiza ese valor por inflación o usa los precios actuales del OR si los consigues.
+\begin{table}[H]
+\centering
+\caption{Comparación técnica y económica de las tecnologías FNCER existentes a pequeña escala}
+\label{tab:tecnologias_fnce}
+\footnotesize
+\begin{tabularx}{\textwidth}{>{\RaggedRight}p{2.2cm}
+                             >{\RaggedRight}X
+                             >{\RaggedRight}X
+                             >{\RaggedRight}X
+                             >{\RaggedRight}X
+                             >{\RaggedRight}X
+                             >{\RaggedRight\arraybackslash}X}
+\toprule
+\textbf{Atributo} & \textbf{Solar FV} & \textbf{Eólica terrestre} & \textbf{Filo de agua} & \textbf{Geotermia binaria} & \textbf{Biomasa} & \textbf{Biogás} \\
+\midrule
+\rowcolor{grisclaro}
+Categoría & Cat.\ 3, en transición a Cat.\ 4 & Cat.\ 3 & Cat.\ 3 & Cat.\ 3 & Cat.\ 3 & Cat.\ 3 \\
 
-\textbf{Escenario B — Red más AGPE:} Todo lo anterior más paneles fotovoltaicos (N° paneles × \$/panel), inversor(es), estructura de montaje, medición bidireccional y cableado del sistema AGPE. Calcula el TOTAL, el COSTO ADICIONAL DEL AGPE (B menos A) y el COSTO POR USUARIO del escenario B.
+Tamaño y capacidad & 1,5--2,1~m\textsuperscript{2}; 450--670~Wp & 1--25~kW & Hasta 1~MW & 1--10~MW & 1--60~MW & 10~kW--1~MW \\
 
-Presenta una tabla comparativa con los dos escenarios lado a lado. Extensión aproximada: 1,5 páginas más la tabla.}
+\rowcolor{grisclaro}
+Inversión [MUSD\,2024/MW] & 1,12 (0,23 instalación) & 3,4 (1,0 instalación) & 4,3 (2,86 instalación) & 6,0 (40\% instalación + 2,98 exploración) & 2,56 (35\% instalación) & 4,38 (19\% instalación) \\
 
-\subsection{Análisis del impacto en la factura del usuario}
-\label{subsec:impacto_factura}
+O\&M [USD\,2024/MWe] & 11.000/año & 68.500/año & 94.000/año & 88.900/año & 60.700/año & 46.200/año \\
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta es la sección que conecta directamente con lo que encontramos en la encuesta: el miedo al incremento de la factura es el principal obstáculo para la normalización. Aquí demuestras con números que el AGPE puede moderar ese impacto. La tabla que necesitas tiene tres columnas:
+\rowcolor{grisclaro}
+Vida útil [años] & 27 & 27 & 50 & 30 & 25 & 25 \\
 
-\begin{enumerate}
-    \item Factura mensual ANTES de la normalización (con el esquema comunitario actual, si tienes datos; si no, usa el valor de la cuota comunitaria promedio que mencionaron los expertos: entre \$40.000 y \$50.000)
-    \item Factura mensual CON normalización SIN AGPE: consumo del usuario × CU − subsidio FOES
-    \item Factura mensual CON normalización CON AGPE: (consumo del usuario − energía del AGPE por usuario) × CU − subsidio FOES
-\end{enumerate}
+Construcción [años] & 0,5 & 1 & 2 & 2 & 2 & 1,5 \\
 
-Calcula la diferencia entre los escenarios 2 y 3 y responde: ¿el AGPE hace la transición económicamente más manejable para las familias? Esa conclusión es clave para la metodología del Capítulo 5.}
+\rowcolor{grisclaro}
+Espacio [1000\,m\textsuperscript{2}/MWe] & 12,5 & 11 & 2,4 & 30 & 35 & 0,649 \\
 
-\subsection{Evaluación de la viabilidad financiera}
-\label{subsec:viabilidad}
+Factor de planta [\%] & 20,3 & 26 & 56 & 88 & 52,6 & 8,2 \\
+\bottomrule
+\multicolumn{7}{l}{\footnotesize\textit{Fuente: Elaboración propia a partir de \parencite{UPMECatalogoTecnologico2024}.}}
+\end{tabularx}
+\end{table}
 
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Con los costos y ahorros de las secciones anteriores, calcula los tres indicadores financieros clásicos:
-
-\begin{enumerate}
-    \item \textbf{Período de recuperación simple (PRS)}: inversión total / ahorro anual total. Expresa el resultado en años.
-    \item \textbf{Valor Presente Neto (VPN)} a 20 años con una tasa de descuento del 10\% (o la tasa del MME si la consigues). Si el VPN es positivo, el proyecto genera valor.
-    \item \textbf{Tasa Interna de Retorno (TIR)}: la tasa a la que el VPN es cero. Compara con la tasa del 10\% para determinar si el proyecto es financieramente viable.
-\end{enumerate}
-
-Una tabla con los indicadores de los dos escenarios lado a lado es suficiente. Extensión aproximada: 1 página más la tabla.}
-
-
-% ─────────────────────────────────────────────────────────────
-\section{Viabilidad y Replicabilidad de los Sistemas AGPE en Proyectos de Normalización}
-\label{sec:viabilidad_replicabilidad}
-% ─────────────────────────────────────────────────────────────
-
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Con los resultados del análisis técnico y financiero, aquí respondes la pregunta: ¿bajo qué condiciones este tipo de proyecto es viable y puede replicarse en otros BS? Cubre cuatro aspectos:
-
-\begin{enumerate}
-    \item \textbf{Condiciones técnicas de viabilidad}: recurso solar mínimo requerido (HPS mínimas), tamaño mínimo del barrio en número de usuarios para que el costo por usuario sea razonable, capacidad mínima del transformador que permite integrar el AGPE dentro del límite del 50\%.
-    \item \textbf{Condiciones financieras}: rango de costo unitario por usuario compatible con la adjudicación del PRONE, nivel mínimo de recaudo post-normalización que garantiza la sostenibilidad del OR.
-    \item \textbf{Condiciones sociales}: nivel mínimo de apropiación comunitaria — aquí conecta con los hallazgos de la encuesta —, y qué modelo de propiedad del AGPE genera más sostenibilidad: ¿OR o Comunidad Energética?
-    \item \textbf{Limitaciones y riesgos reales}: ¿qué pasa si los usuarios manipulan o venden los paneles? ¿Hay técnicos locales para el mantenimiento en la región Caribe? ¿La salinidad y la humedad del ambiente costero afectan la vida útil de los paneles? ¿Qué pasa con los excedentes cuando el AGPE genera más de lo que consume el barrio en horas de sol?
-\end{enumerate}
-
-Extensión aproximada: 1,5 páginas.}
-
-
-% ─────────────────────────────────────────────────────────────
-\section{Ventajas y Desventajas de la Incorporación de AGPE en la Normalización}
-\label{sec:ventajas_desventajas}
-% ─────────────────────────────────────────────────────────────
-
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Esta sección sintetiza los hallazgos del capítulo en un análisis estructurado de pros y contras desde tres perspectivas. Puedes hacerlo como texto o como tabla — yo te recomiendo la tabla porque queda más clara visualmente. Las tres perspectivas son:
-
-\textbf{Técnica} — Ventajas: reduce consumo neto de la red (menos carga en el transformador y los conductores de BT), puede mejorar la calidad de tensión en horas de mayor irradiación, diversifica la fuente de energía. Desventajas: la generación solar varía (de noche no hay y en días nublados baja), requiere medición bidireccional adicional, el mantenimiento de paneles e inversores puede ser difícil en BS alejados.
-
-\textbf{Social} — Ventajas: reduce el impacto en la factura y por tanto la resistencia comunitaria, el panel en el techo es visible y tangible (la red normalizada no se ve), puede crear sentido de apropiación si los activos se ceden a la Comunidad Energética. Desventajas: mayor complejidad en la socialización del proyecto, riesgo de que los usuarios manipulen o vendan los paneles, la figura de Comunidad Energética requiere capacidades administrativas que pueden no existir en la comunidad.
-
-\textbf{Económica} — Ventajas: reduce la factura del usuario y mejora la sostenibilidad del recaudo a largo plazo, reduce el Costo Unitario del OR en el área normalizada al bajar las pérdidas técnicas, los paneles tienen vida útil de 25 años. Desventajas: costo inicial significativamente mayor que la normalización sin AGPE, mayor presión sobre los recursos del PRONE, el período de recuperación de la inversión es más largo.
-
-Extensión aproximada: 1 a 1,5 páginas o una tabla de 3 filas por 2 columnas.}
+De acuerdo con lo anterior, la demanda de energía diaria a suplir por el sistema fotovoltaico debe ser de mínimo 5,76~kWh/día asumiendo un mes de 30 días. Como se debe suplir mínimo el consumo básico, se toman las condiciones críticas de disponibilidad del recurso solar; por ende, el dimensionamiento se realiza con la irradiancia solar del mes más bajo en el área de influencia.
 
 
 % ─────────────────────────────────────────────────────────────
 \section{Síntesis del Capítulo}
 \label{sec:sintesis_cap4}
 % ─────────────────────────────────────────────────────────────
-
-\textcolor{red}{\textbf{[NOTA PARA SOLEY:]}} \textcolor{red}{Una vez que completes las secciones anteriores, escribe aquí 3 a 4 párrafos resumiendo los hallazgos principales del capítulo. El texto debe responder directamente al Objetivo Específico 3: ``Analizar técnica y financieramente la implementación de proyectos de normalización de redes eléctricas en barrios subnormales, incluyendo sistemas de AGPE, a través de un caso de estudio de la literatura, para evaluar su viabilidad y replicabilidad.''
-
-El último párrafo debe conectar con la metodología del Capítulo 5: algo como ``Los resultados de este análisis muestran que [hallazgo clave], lo que se traduce en los siguientes criterios que orientan la metodología del Capítulo 5...'' Ese cierre es importante porque hace explícito cómo los capítulos se articulan entre sí.}
 
 El análisis histórico del PRONE entre 2005 y 2025 deja un panorama
 claro: en veinte años de operación el programa ha beneficiado a cerca
